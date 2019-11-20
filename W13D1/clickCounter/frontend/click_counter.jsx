@@ -7,6 +7,12 @@ class ClickCounter extends React.Component {
     super(props);
 
     this.state = { count: 0, previousCounts: [] };
+    
+    // It is better to bind functions to the constructor, thus changing the 
+    // pointer. We are now pointing to the function that has been bound to the
+    // scope of this, instead of the function directly. 
+    this.click = this.click.bind(this);
+    this.reset = this.reset.bind(this);
   }
 
   click(event) {
@@ -20,7 +26,7 @@ class ClickCounter extends React.Component {
     previousCounts.push(this.state.count);
     // remember { previousCounts: previousCounts } = { previousCounts }
     // this is due to deconstruction, js automatically makes key, when there 
-    // are the same names for key and value
+    // are the same names for key and value.
     this.setState({ count: 0, previousCounts })
   }
 
@@ -28,10 +34,10 @@ class ClickCounter extends React.Component {
   render() {
     return(
       <div>
-        <button onClick={ this.click.bind(this) }>CLICK ME!!!!</button>
+        <button onClick={ this.click }>CLICK ME!!!!</button>
         <span>{ this.state.count }</span>
         <br />
-        <button onClick={this.reset.bind(this)}>Reset</button>
+        <button onClick={this.reset }>Reset</button>
         <Amount previousCounts={ this.state.previousCounts }/>
       </div>
     );

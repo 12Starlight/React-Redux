@@ -41,17 +41,45 @@ import React from 'react';
 
 // const Amount = (props) => (
 // This can be destructured, and should be done when you define the function
-const Amount = ({ previousCounts }) => (
-  <ul>
-    { 
-      // props.previousCounts.map(count => <li>{count}</li>)
-      // destructured
-      previousCounts.map((count, i) => <li key={i}>{count}</li>)
-    }
-  </ul>
-);
+// const Amount = ({ previousCounts }) => (
+//   <ul>
+//     { 
+//       // props.previousCounts.map(count => <li>{count}</li>)
+//       // destructured
+//       previousCounts.map((count, i) => <li key={i}>{count}</li>)
+//     }
+//   </ul>
+// );
 
 
-export default Amount;
+// export default Amount;
 
 
+// Lifecycle Methods Example
+class Amount extends React.Component {
+  // We do not invoke these functions, they called naturally in the lifecycle
+  // of a component and binding is autobound 
+  componentWillMount() { debugger }
+  componentDidMount() { debugger }
+  componentWillReceiveProps(nextProps) { debugger }
+  componentWillUpdate(nextProps, nextState) { debugger }
+  componentDidUpdate(prevProps, prevState) { debugger }
+  // used for single page front apps, when things get removed from the DOM
+  componentWillUnmount() { debugger }
+
+
+  render() {
+    return(
+      <ul>
+        {
+          this.props.previousCounts.map(
+            (count, index) => <li key={index}>{count}</li>
+          )
+        }
+      </ul>
+    )
+  }
+}
+
+
+export default Amount; 
