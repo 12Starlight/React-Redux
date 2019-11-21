@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Root from './components/root';
 
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('content');
-  ReactDOM.render(<h1>Widgets APP</h1>, root);
+  ReactDOM.render(<Root />, root);
 });
