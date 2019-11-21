@@ -1,6 +1,6 @@
 # W13D1
 
-Understanding how are package.json is controlling our packages
+Understanding how our package.json is controlling our packages
 - Webpack: Using the imports and exports to bundle all the files into one file
 - Object Destructing:
     - Make sure you understand how nested objects work with object destructuring
