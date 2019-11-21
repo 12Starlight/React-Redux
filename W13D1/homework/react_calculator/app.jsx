@@ -7,3 +7,4 @@ document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('content');
   ReactDOM.render(<Calculator />, root);
 });
+
