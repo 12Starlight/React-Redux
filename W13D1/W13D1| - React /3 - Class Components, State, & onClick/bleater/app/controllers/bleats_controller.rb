@@ -3,9 +3,11 @@ class BleatsController < ApplicationController
   before_action :ensure_user_logged_in, only: [:create, :new, :edit, :update, :destroy]
 
   def index
+    sleep(3)
     # render plain: "Hello, World!"
     # render json: '{"tommy": "hello"}'
     # @bleats = Bleat.includes(:author).all
+    bleats = Bleat.all 
     render :index
   end
 
