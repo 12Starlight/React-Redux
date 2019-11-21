@@ -4,8 +4,10 @@
 #### Parts I felt confident
 > Setting up files, npm, script, webpack, index, and app.jsx
 <br>
+
 > Setting up initial state and input with <kbd>onChange</kbd> and <kbd>value</kbd> 
 <br>
+
 > **Note: Did not look at homework solutions :D** :heart_eyes: 
 
 #### Parts I struggled with
