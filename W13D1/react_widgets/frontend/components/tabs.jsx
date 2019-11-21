@@ -23,7 +23,7 @@ class Tabs extends React.Component {
     const { tabs } = this.props; 
     const tabLis = tabs.map((tab, i) => {
       return(
-        <li key={i} onClick={() => this.indexChange(i)} >{ tab.title }</li>
+        <h1 key={i} onClick={() => this.indexChange(i)} >{ tab.title }</h1>
       ) 
     })
     
@@ -31,10 +31,12 @@ class Tabs extends React.Component {
     return (
       <div>
         <ul>{ tabLis }</ul>
-        <div>{ tabs[this.state.index].content }</div>
+        <article>
+          <div>{ tabs[this.state.index].content }</div>
+        </article>
       </div>
     );
-  }
+  } 
 }
 
 

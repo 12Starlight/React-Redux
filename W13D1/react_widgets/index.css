@@ -24,7 +24,7 @@
 .clock_header {
   color: rgb(238, 238, 238);
   margin-left: 5px; 
-}
+} 
 
 .clock_data_wrapper {
   display: flex;
