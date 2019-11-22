@@ -1,6 +1,7 @@
 import React from 'react';
 import Clock from './clock';
 import Tabs from './tabs';
+// import Weather from './weather'
 
 
 const Root = () => {
@@ -17,6 +18,9 @@ const Root = () => {
         <div className="wigits_wrapper">
           <Clock />
           <Tabs tabs={ tabs }/>       
+        </div>
+        <div>
+          <div />
         </div>
       </div>
     </div>
