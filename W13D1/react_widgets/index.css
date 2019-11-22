@@ -86,7 +86,7 @@
 .clock_time {
   display: flex;
   justify-content: flex-end;
-  width: 42%;
+  width: 45%;
   padding: auto; 
   border-radius: 25px;
   background-color: rgba(238, 238, 238, 0.671);
