@@ -35,7 +35,7 @@ class Clock extends React.Component {
 
     return (
       <div className="clock">
-        <h1 className="clock_header">Clock Widget</h1>
+        <h1 className="clock_header">Clock</h1>
         <div className="clock_data_wrapper">
           <div className="clock_inner_divs">
             <div className="clock_titles"><span className="clock_title_spans">Date: </span></div>

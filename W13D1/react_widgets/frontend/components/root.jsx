@@ -13,8 +13,11 @@ const Root = () => {
   return (
     <div>
       <div className="container">
-        <Clock />
-        <Tabs tabs={ tabs }/>
+        <div className="container_h1"><h1>Widgets</h1></div>
+        <div className="wigits_wrapper">
+          <Clock />
+          <Tabs tabs={ tabs }/>       
+        </div>
       </div>
     </div>
   ); 
