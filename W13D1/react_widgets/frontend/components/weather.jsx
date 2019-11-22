@@ -15,22 +15,22 @@ class Weather extends React.Component {
       console.log(location); 
       let lattitude = location.coords.latitude;
       let longitude = location.coords.longitude; 
-      let api = '4d51480b8ea6df785981affcb63ac815';
+      let api = 'APPID=4d51480b8ea6df785981affcb63ac815';
       
       let request = new XMLHttpRequest();
       request.open(
         "GET",
         "http://api.openweathermap.org/data/2.5/weather?" + 
-        lattitude  + 
-        longitude +
+        `lat=${lattitude}&`  + 
+        `lon=${longitude}&` +
         api, 
         true
       );
 
       request.onload = () => {
-        if (this.status >= 200 && this.status < 400) {
+        if (request.status >= 200 && request.status < 400) {
           // Success!
-          let resp = this.response;
+          let resp = request.response;
           this.setState({
             weather: resp 
           })
@@ -46,9 +46,11 @@ class Weather extends React.Component {
       request.send(); 
     }); 
   }
-
-
+  
+  
   render() {
+    console.log(this.state.weather);
+
     return(
       <div>{ this.state.weather }</div>
     )

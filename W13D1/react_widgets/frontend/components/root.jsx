@@ -1,8 +1,8 @@
 import React from 'react';
 import Clock from './clock';
 import Tabs from './tabs';
-// import Weather from './weather'
-import Autocomplete from './autocomplete';
+import Weather from './weather'
+// import Autocomplete from './autocomplete';
 
 
 const Root = ({names}) => {
@@ -21,8 +21,8 @@ const Root = ({names}) => {
           <Tabs tabs={ tabs }/>       
         </div>
         <div>
-          <div />
-          <Autocomplete names={names} />
+          <Weather />
+          {/*<Autocomplete names={names} /> */}
         </div>
       </div>
     </div>
