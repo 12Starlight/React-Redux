@@ -23,16 +23,17 @@ class Tabs extends React.Component {
     const { tabs } = this.props; 
     const tabLis = tabs.map((tab, i) => {
       return(
-        <h1 key={i} onClick={() => this.indexChange(i)} >{ tab.title }</h1>
+        <h1 className="tabs_header" key={i} onClick={() => this.indexChange(i)} >{ tab.title }</h1>
       ) 
     })
     
     console.log(this.state.index) 
     return (
-      <div>
-        <ul>{ tabLis }</ul>
-        <article>
-          <div>{ tabs[this.state.index].content }</div>
+      <div className="tabs">
+        <h1 className="tabs_h1">Tabs</h1>
+        <ul className="tabs_header_wrapper">{ tabLis }</ul>
+        <article className="tabs_article_wrapper">
+          <div className="tabs_content">{ tabs[this.state.index].content }</div>
         </article>
       </div>
     );

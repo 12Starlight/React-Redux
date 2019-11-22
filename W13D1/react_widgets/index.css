@@ -76,3 +76,53 @@
 .clock_time_span {
   margin-right: 8px; 
 }
+
+
+/* Tabs */
+.tabs {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Alata', sans-serif;
+  margin: 100px 0 0 15px;
+  width: 300px;
+  height: 200px; 
+  border: .4px solid paleturquoise;
+  background-color: rgba(0, 247, 255, 0.801);
+}
+
+.tabs_h1 {
+  margin: 21.44px 0 7px 5px; 
+}
+
+.tabs_header_wrapper {
+  display: flex;
+  /* flex-direction: column;  */
+  height: 40px; 
+  margin: 2px 0 2px 0; 
+  padding: 0; 
+  border-bottom: 1.5px solid rgba(243, 226, 195, 0.384);
+}
+
+.tabs_header {
+  align-content: center;
+  color: whitesmoke; 
+  font-size: 1em;
+  margin: 0 0 0 0;
+  padding: 10px 0 10px 15px; 
+}
+
+.tabs_article_wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  margin-bottom: 20px; 
+  padding: 15px 15px 0 13px; 
+}
+
+.tabs_content {
+  width: 80%; 
+  padding: 3px; 
+  border-radius: 5px;
+  background-color: rgba(255, 99, 71, 0.253);
+}
