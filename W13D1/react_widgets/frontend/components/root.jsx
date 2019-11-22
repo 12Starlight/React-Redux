@@ -4,7 +4,11 @@ import Tabs from './tabs';
 
 
 const Root = () => {
-  let tabs = [{ title: 'Ninja Turtles', content: 'Throwback' }, { title: 'Legos', content: 'Never out of style'}, { title: 'App Academy', content: 'changes lives ;)'}]; 
+  let tabs = [
+    { title: "Ninja Turtles", content: "Throwback" },
+    { title: "Legos", content: "Never out of style" },
+    { title: "AppAcademy", content: "Changes lives 🙌" }
+  ]; 
 
   return (
     <div>
