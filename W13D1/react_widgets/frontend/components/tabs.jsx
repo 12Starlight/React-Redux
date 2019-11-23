@@ -27,7 +27,7 @@ class Tabs extends React.Component {
       ) 
     })
     
-    console.log(this.state.index) 
+    // console.log(this.state.index) 
     return (
       <div className="tabs">
         <h1 className="tabs_h1">Tabs</h1>

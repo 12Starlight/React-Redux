@@ -5,17 +5,17 @@ import Root from './components/root';
 
 document.addEventListener('DOMContentLoaded', () => {
   const names = [
-    { fname: "Arron" },
-    { fname: "Timmy" },
-    { fname: "Sasha" },
-    { fname: "Zoey" },
-    { fname: "Zip" },
-    { fname: "Chimmy" },
-    { fname: "Tote" },
-    { fname: "Aria" },
-    { fname: "Ned" },
-    { fname: "Snow" },
-    { fname: "Eisa" }
+    "Arron",
+    "Timmy",
+    "Sasha",
+    "Zoey",
+    "Zip",
+    "Chimmy",
+    "Tote",
+    "Aria",
+    "Ned",
+    "Snow",
+    "Eisa"
   ];
 
 

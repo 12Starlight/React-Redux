@@ -2,9 +2,9 @@ import React from 'react';
 import Clock from './clock';
 import Tabs from './tabs';
 import Weather from './weather'
-// import Autocomplete from './autocomplete';
+import AutoComplete from './autocomplete';
 
-
+// create state, show/hide clock 
 const Root = ({names}) => {
   let tabs = [
     { title: "Ninja Turtles", content: "Throwback" },
@@ -14,15 +14,15 @@ const Root = ({names}) => {
 
   return (
     <div>
-      <div className="container">
+      <div className="container_1">
         <div className="container_h1"><h1>Widgets</h1></div>
         <div className="wigits_wrapper">
           <Clock />
           <Tabs tabs={ tabs }/>       
         </div>
-        <div>
+        <div className="container_2">
           <Weather />
-          {/*<Autocomplete names={names} /> */}
+          <AutoComplete names={names} />
         </div>
       </div>
     </div>

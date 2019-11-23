@@ -1,10 +1,9 @@
 /* Main Page */
-.container {
+.container_1 {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
-  height: 900px; 
+  height: 100vh; 
   background-size: cover; 
   background-image: url(./Color_icon_blue.svg.png);
 }
@@ -16,6 +15,7 @@
   height: 70px;
   margin-top: 80px; 
   color: whitesmoke; 
+  border: 2.5px solid rgba(255, 255, 255, 0.137);
   background-color: rgba(245, 245, 245, 0.322);
 }
 
@@ -23,7 +23,7 @@
   display: flex; 
   justify-content: center;
   align-items: center;
-  margin-top: 80px; 
+  margin-top: 80px;
 }
 
 
@@ -157,4 +157,77 @@
   padding: 5px; 
   border-radius: 5px;
   background-color: rgba(255, 99, 71, 0.253);
+}
+
+
+/* Main Page */
+.container_2 {
+  margin-top: 70px; 
+  height: 340px;
+  width: 710px;
+  background-color: rgba(63, 68, 68, 0.507);
+  border: 2.5px solid rgba(126, 126, 126, 0.438)
+}
+
+/* Weather */
+.weather_wrapper {
+  display: flex; 
+  flex-direction: column;
+  height: 40%;
+}
+
+.weather_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center; 
+  justify-content: space-between;
+  color: whitesmoke;
+  font-family: 'Alata', sans-serif;
+  font-size: 1.6em; 
+  padding: 0 7px; 
+  margin-top: 20px; 
+  height: 45px; 
+  background-color: rgba(255, 0, 255, 0.521); 
+}
+
+
+/* AutoComplete */
+.autocomplete_wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 30px 0 0 0; 
+  /* padding: 40px;  */
+  height: 150px;
+}
+
+.search_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px; 
+}
+
+.name_container {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  color: whitesmoke;
+  font-family: 'Alata', sans-serif;
+  font-size: 1em; 
+  height: 100px; 
+  margin: 30px 0 10px 0;  
+  padding: 0; 
+  background-color: rgba(192, 192, 192, 0.384);  
+}
+
+.name {
+  cursor: pointer;
+}
+
+.search {
+  outline: none;
+  border: 1.5px solid silver; 
 }

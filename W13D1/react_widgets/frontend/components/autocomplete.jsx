@@ -1,42 +1,65 @@
-import React from 'react'
+import React from 'react';
 
 
-class Autocomplete extends React.Component {
+class AutoComplete extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      inputVal: "",
-      names: []
+      inputVal: '',
+      search: ''
     }
 
-    this.searchField = this.searchField.bind(this); 
+    this.changedValue = this.changedValue.bind(this);
+    this.searchVal = this.searchVal.bind(this); 
   }
 
-  searchField() {
-    return e => this.setState({
-      inputVal: e.currentTarget.value 
-    });
+  changedValue(e) {
+    this.setState({
+      inputVal: e.currentTarget.value
+    })
+  };
+
+  searchVal(e) {
+    this.setState({
+      // search: e.target.value
+      search: e.currentTarget.value   
+    })
   }
 
-  
+  forceValue(val) {
+    return () => this.setState({
+      inputVal: val 
+    })
+  }
+
+
   render() {
-    const { names, inputVal } = this.props; 
-    const nameLis = names.filter(name => {
-      name.fname.toLowerCase().includes(inputVal.toLowerCase())
+    const { names } = this.props; 
+    const filteredNames = names.filter(name => {
+      return name.toLowerCase().includes(this.state.inputVal.toLowerCase())
     });
 
+    const nameLis = filteredNames.map((name, i) => {
+      return <li key={i} onClick={ this.forceValue(name) } className="name" >{ name }</li>
+    });
+
+    window.forceValue = this.forceValue.bind(this); 
+    console.log(this.state.inputVal); 
     return(
-      <div>
-        <ul>
-          <input onChange={ this.searchField } />
-          <div>{ nameLis }</div>
-        </ul>
-      </div>
+      <section className="autocomplete_wrapper">
+        <div className="search_container">
+          <input onChange={ this.changedValue } className="search" placeholder="Search" value={ this.state.inputVal } />
+        </div>
+        <article>
+          <ul className="name_container">
+          { nameLis } 
+          </ul>
+        </article>
+      </section>
     )
   }
 }
 
 
-export default Autocomplete; 
-
+export default AutoComplete; 

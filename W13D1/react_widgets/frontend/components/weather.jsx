@@ -6,13 +6,14 @@ class Weather extends React.Component {
     super(props);
 
     this.state = {
-      weather: ""
+      weather: null 
     }
+
   }
 
   componentDidMount() {
     navigator.geolocation.getCurrentPosition((location) => {
-      console.log(location); 
+      // console.log(location); 
       let lattitude = location.coords.latitude;
       let longitude = location.coords.longitude; 
       let api = 'APPID=4d51480b8ea6df785981affcb63ac815';
@@ -32,15 +33,15 @@ class Weather extends React.Component {
           // Success!
           let resp = request.response;
           this.setState({
-            weather: resp 
+            weather: JSON.parse(resp)
           })
         } else {
-          // We reached our target server, but it returned an error
+          console.log('We reached our target server, but it returned an error');
         }
       };
 
       request.onerror = () => {
-        // There was a connection error of some sort
+        console.log('There was a connection error of some sort');
       }
 
       request.send(); 
@@ -49,10 +50,23 @@ class Weather extends React.Component {
   
   
   render() {
-    console.log(this.state.weather);
+    if (!this.state.weather) return null 
+    // console.log(this.state.weather); 
+    const { name, main: { temp: temperature } } = this.state.weather; 
+
+    const fahrenheit = ((temperature - 273.15) * 1.8) + 32; 
 
     return(
-      <div>{ this.state.weather }</div>
+      <section className="weather_wrapper">
+        <div className="weather_container">
+          <div><span>City: </span></div>
+          <div><span>{ name }</span></div>
+        </div>
+        <div className="weather_container">
+          <div><span>Temperature: </span></div>
+          <div><span>{fahrenheit.toFixed(2) + ' °Fahrenheit' }</span></div>
+        </div>   
+      </section>
     )
   }
 }

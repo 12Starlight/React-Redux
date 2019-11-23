@@ -22,6 +22,7 @@ class Clock extends React.Component {
   componentWillUnmount() {
     // If we hide this at some point, useful to not have it running anymore
     clearInterval(this.id); 
+    console.log('unmounting clock'); 
   }
 
   tick() {
