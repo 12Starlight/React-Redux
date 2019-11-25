@@ -47,4 +47,7 @@ solve this lag we want to pass in a second callback as the second argument for
 `this.setState()`. This will not run until after the state has been updated, 
 thus you are garenteed to actually reflect the change. 
 
+Also, `setState()` takes two arguments, the first being an object with keys, the 
+second being a callback function for after the state has been set. 
+
 
