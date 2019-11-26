@@ -1,8 +1,13 @@
 import React from 'react';
+import Game from './game/game';
 
 
 const Root = () => {
-  return <div>React Minesweeper</div>
+  return(
+    <div>
+      <Game />    
+    </div>
+  ) 
 }
 
 
