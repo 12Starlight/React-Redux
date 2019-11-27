@@ -37,7 +37,10 @@ class Game extends React.Component {
     // debugger 
     if (this.state.board.lost() || this.state.board.won()) {
       return(
-        <Modal board={ this.state.board } restartGame={ this.restartGame } />
+        <div>
+          <Board board={this.state.board} updateGame={this.updateGame} />
+          <Modal board={this.state.board} restartGame={this.restartGame} />
+        </div>
       ) 
     } 
 
