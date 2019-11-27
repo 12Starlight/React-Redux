@@ -15,10 +15,10 @@ class Board extends React.Component {
       <div className="board">
         <h1>Minesweeper</h1>
 
-        <p>
-          <div>Click to explore tile.</div>
-          <div>Alt + click to flag a tile.</div>
-        </p>
+        <div>
+          <p>Click to explore tile.</p>
+          <p>Alt + click to flag a tile.</p>
+        </div>
 
         &nbsp;
 

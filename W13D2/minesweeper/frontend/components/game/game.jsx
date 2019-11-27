@@ -1,6 +1,7 @@
 import React from 'react';
 import * as Minesweeper from '../../../minesweeper';
 import Board from '../board/board';
+import Tile from '../tile/tile';
 
 
 class Game extends React.Component {
@@ -9,7 +10,6 @@ class Game extends React.Component {
 
     this.state = {
       board: new Minesweeper.Board(9, 12),
-      text: ''  
     }
 
     this.updateGame = this.updateGame.bind(this);
@@ -20,13 +20,24 @@ class Game extends React.Component {
   //     [field]: e.target.value 
   //   });
   // }
-  updateGame() {
-
+  updateGame(tile, flagged) {
+    if (flagged) {
+      tile.toggleFlag()
+    } else {
+      tile.explore()
+    }
+    this.setState({ board: this.state.board })
   }
 
 
 
   render() {
+    if (this.state.board.lost()) {
+      return(
+        <Modal text={ text } />
+        // this.state.board = new Board(9, 12)
+      ) 
+    } 
     return(
       <div>
         <Board board={ this.state.board } updateGame={ this.updateGame } />

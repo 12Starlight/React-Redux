@@ -1,25 +1,41 @@
 import React from 'react';
 
 
-const Tile = ({ updateGame, tile }) => {
-  let tileText = '';
-  let className = 'hidden'; 
-  if (tile.explored) {
-    className='revealed'; tile.explored = true; tileText = tile.adjacentBombCount(); 
-  } else if (tile.bombed) {
-    className='bombed'; tile.bombed = true; tileText = "💣";
-  } else if (tile.flagged) {
-    className='flagged'; tile.flagged = true; tileText = "🚩";
-  } else {
-    tileText; className='hidden'; 
+class Tile extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.handleClick = this.handleClick.bind(this);
   }
 
+  handleClick(e) {
+    return this.props.updateGame(this.props.tile, e.altKey);
+  }
+
+
   
-  return(
-    <div className={ className } >
-      { tileText }
-    </div>
-  ) 
+  render() {  
+    const { tile } = this.props;
+
+    let tileText = '';
+    let className = 'hidden'; 
+    if (tile.explored && !tile.bombed) {
+      className='revealed'; tileText = tile.adjacentBombCount(); 
+    } else if (tile.bombed && tile.explored) {
+      className='bombed'; tileText = "💣";
+    } else if (tile.flagged) {
+      className='flagged'; tileText = "🚩";
+    } else {
+      tileText; className='hidden'; 
+    }
+
+    
+    return(
+      <div className={ className } onClick={ this.handleClick }>
+        { tileText }
+      </div>
+    )
+  } 
 }
 
 
