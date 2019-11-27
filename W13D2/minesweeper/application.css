@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 998;
 }
 
 .row {
@@ -42,3 +43,39 @@
   width: 25px; 
   border-style: outset; 
 }
+
+
+/* Modal */
+.modal_section {
+  /* position: fixed; */
+  display: flex;
+  justify-content: center;
+  z-index: 999;
+  height: 100vh;
+  /* border: 1px solid fuchsia; */
+  /* background-color: rgba(6, 6, 6, 0.3); */
+  background: transparent;
+}
+
+
+.modal_article {
+  /* position: fixed; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  height: 300px;
+  width: 300px; 
+  margin-top: 200px;
+  padding: 30px; 
+  border-radius: 5px;
+  background: white; 
+  border: 1px solid rgb(179, 172, 172);
+}
+
+/* .modal_hide {
+  position: fixed; 
+  z-index: 997;
+  background-color: gray;
+} */
