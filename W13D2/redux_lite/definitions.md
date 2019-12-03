@@ -35,3 +35,8 @@ The `type` of the incoming `action` and then change the state based on that `act
   * reducers will have a default value for their `prevState`
   * if a reducer 'ignores' an `action`, it will return the unmodified `prevState`
   * if a reducer 'responds' to an `action`, it will either return something completely new (data from an action) or will create a **new copy** of the `prevState` before making any changes
+
+Remember to use Object.assign or import { merge } from 'lodash' and do a deep copy of the store's state. When assigning a key wrap the entire assignment in an object like so:
+      
+      if (action.type === 'working professional') {
+        return Object.assign(oldState, { role: action.newRole });

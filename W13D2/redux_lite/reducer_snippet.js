@@ -4,6 +4,12 @@ let state = {
   role: 'Instructor'
 };
 
+// my state
+let other = {
+  user: 'Dave',
+  role: 'Student'
+}
+
 
 /*
 
@@ -17,6 +23,12 @@ const action = {
   newRole: 'Student'
 };
 
+// my action
+const otherAction = {
+  type: 'working professional',
+  newRole: 'Software Engineer'
+}
+
 
 /*
 
@@ -29,6 +41,14 @@ A `roleReducer` might look like:
 const roleReducer = (oldRole = null, action) => {
   if (action.type === 'change role') {
     return action.newRole;
+  } else {
+    return oldRole; 
+  }
+}
+
+const otherRoleReducer = (oldRole = null, action) => {
+  if (action.type === 'working professional') {
+    return Object.assign(oldState, { role: action.newRole });
   } else {
     return oldRole; 
   }
