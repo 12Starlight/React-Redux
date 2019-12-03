@@ -31,3 +31,12 @@
     - Understand how to use React components to render and interact with the Minesweeper library game classes
         - The game classes provide the logic and the current state of the game with functions to change the state of the game, while React components offer the ability for users to view the state of the game and interact with it in a visually pleasing way.
     - This project’s goal is to help you practice how to integrate different kinds of game states into React components and interact with the game using Synthetic Events in React components.
+- Redux Lite outline:
+  - Only do Parts 1 - 4
+  - Phase 1:
+      - Creating a global store
+  - Phase 2:
+      - Make reducers that will determine the new state of our global store
+      - Understand how combine reducers will determine the new slices of state
+  - Phase 3:
+      - Understand how to connect the store to our React components

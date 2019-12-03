@@ -23,7 +23,7 @@
 
 ### State
 
-Our global `state` object will store keys representing application data. For instance, if our state object has keys of `user` and `role`, we could create reducers that are named `usersReducer` and `roleReducer`. These keys would point to the new value of `userReducer` and `roleReducer` after each action. 
+Our global `state` object will store keys representing application data. For instance, if our state object has keys of `user` and `role`, we could create reducers that are named `usersReducer` and `roleReducer`. These would be responsible for returning the new value of `user` and `role` after each action. 
 
 &nbsp;
 
@@ -40,3 +40,10 @@ Remember to use Object.assign or import { merge } from 'lodash' and do a deep co
       
       if (action.type === 'working professional') {
         return Object.assign(oldState, { role: action.newRole });
+
+&nbsp;
+
+### Combining Reducers
+
+Calling every reducer manually would be tedious. Instead, we can have them define an object that has `keys` that point to a `reducer` which represents that part of the `state`.
+

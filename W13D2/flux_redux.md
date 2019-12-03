@@ -1,7 +1,7 @@
 What is flux? And how is it related to React?
 > Answer: Flux is a front-end application architecture, developed by Facebook to 
 > use with React. It is not a library or a framework, but instead a pattern in 
-> terms of how structure one's application. 
+> terms of how to structure one's application. 
 
 What are the different elements of Flux? And how are they implemented in Redux?
 > Answer: Action, Dispatcher, Store and View
