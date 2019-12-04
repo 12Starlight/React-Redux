@@ -1,13 +1,13 @@
 // Example object
-const reducers = {
-  users: reducerForUsers,
-  roles: reducerForRoles,
-  banannas: reducerForBanannas,
-  entities: reducerForEntities
-}
+// const reducers = {
+//   users: reducerForUsers,
+//   roles: reducerForRoles,
+//   banannas: reducerForBanannas,
+//   entities: reducerForEntities
+// }
 
 // combineReducers
-export const myCombineReducers = (reducersObj) => {
+const myCombineReducers = (reducersObj) => {
   return (prevState, action) => {
     let nextState = {};
 
@@ -19,3 +19,4 @@ export const myCombineReducers = (reducersObj) => {
   }
 }
 
+module.exports = myCombineReducers; 
