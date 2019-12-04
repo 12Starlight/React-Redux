@@ -28,5 +28,12 @@ const action = {
   user: 'Jeffrey Fiddler'
 };
 
-store.dispatch(action); 
-console.log(store.getState()); // => { user: 'Jeffrey Fiddler' } 
+// store.dispatch(action); 
+// console.log(store.getState()); // => { user: 'Jeffrey Fiddler' } 
+
+
+// Created new store and tested getState() to get the default state
+const newStore = new Store(rootReducer);
+
+newStore.dispatch(action);
+console.log(newStore.getState()); 

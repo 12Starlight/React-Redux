@@ -2,7 +2,7 @@
 
 
 class Store {
-  constructor(rootReducer, globalState = rootReducer('','')) {
+  constructor(rootReducer, globalState = rootReducer('', '')) {
     this.globalState = globalState; 
     this.rootReducer = rootReducer; 
   }
