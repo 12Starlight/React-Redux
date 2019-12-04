@@ -1,16 +1,20 @@
-import { merge } from 'lodash'; 
+// import { merge } from 'lodash'; 
 
 
 class Store {
-  constructor(rootReducer, globalState = {}) {
+  constructor(rootReducer, globalState = rootReducer('','')) {
     this.globalState = globalState; 
+    this.rootReducer = rootReducer; 
   }
 
   getState() {
-    return merge({}, this.globalState); 
+    // return merge({}, this.globalState);
+    return Object.assign({}, this.globalState); 
+  }
+
+  dispatch(action) {
+    this.globalState = this.rootReducer(this.globalState, action); 
   }
 }
 
-
-\
-]=[-P0965]
+module.exports = Store;

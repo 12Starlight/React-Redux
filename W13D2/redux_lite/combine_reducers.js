@@ -8,7 +8,7 @@
 
 // combineReducers
 const myCombineReducers = (reducersObj) => {
-  return (prevState, action) => {
+  return (prevState = {}, action) => { // this represents the selected reducer
     let nextState = {};
 
     for (key in reducersObj) {
