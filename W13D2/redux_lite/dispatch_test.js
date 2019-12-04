@@ -36,4 +36,5 @@ const action = {
 const newStore = new Store(rootReducer);
 
 newStore.dispatch(action);
+// newStore.subscribe(function)
 console.log(newStore.getState()); 

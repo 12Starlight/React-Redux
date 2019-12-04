@@ -2,9 +2,10 @@
 
 
 class Store {
-  constructor(rootReducer, globalState = rootReducer('', '')) {
+  constructor(rootReducer, globalState = rootReducer('', '', '')) {
     this.globalState = globalState; 
     this.rootReducer = rootReducer; 
+    this.subscriptions = [];
   }
 
   getState() {
@@ -13,8 +14,14 @@ class Store {
   }
 
   dispatch(action) {
-    this.globalState = this.rootReducer(this.globalState, action); 
+    console.log(this.subscriptions);
+    this.globalState = this.rootReducer(this.globalState, action, this.subscriptions); 
   }
+
+  subscribe(subscript) {
+    this.subscriptions.push(subscript)
+  }
+
 }
 
 module.exports = Store;

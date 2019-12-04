@@ -47,3 +47,8 @@ Remember to use Object.assign or import { merge } from 'lodash' and do a deep co
 
 Calling every reducer manually would be tedious. Instead, we can have them define an object that has `keys` that point to a `reducer` which represents that part of the `state`.
 
+&nbsp;
+
+### Subscription
+
+This is an array of functions that get added each time we call `store.subscribe`. Once that function is added to the subscriptions array, it gets invoked in the inner function of combineReducer. This happens only, if the state has changed for that reducer. Each function takes in next state as an argument. One example of how this might be helpful is by creating a logger function that console.logs each change in the state as it happens. 
