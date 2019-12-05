@@ -39,7 +39,7 @@ The `store` being only an object, has a tiny Redux API.
 
 Each time `store.dispatch()` is called, the store passes its most updated `state`, forward with the `action` being dispatched, to the `reducer`. The `reducer` bare function takes two arguments(`state` and `action`), then returns the next new `state`. 
   * The reducer's `state` parameter provides a default value; this is the **initial state** of the store prior to any actions. It can be set to an object, array, or anything really. 
-  * In Redux, <kbd>**the state is immutable**</kbd>, so the reducer must return a **new array or object** when the state updates.  
+  * In Redux, [the state is immutable](), so the reducer must return a **new array or object** when the state updates.  
 
 &nbsp;
 
