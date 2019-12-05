@@ -7,7 +7,8 @@ What will be the initial current state when the store initializes?
 
 How does combineReducers work?
 > Answer: It accepts an object as an argument that has keys pointing to reducers
-> that represent that particular slice of state. 
+> that represent that particular slice of state. This object of keys represents
+> the entire store state.  
 
 &nbsp;
 
