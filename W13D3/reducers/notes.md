@@ -2,7 +2,7 @@
 
 ### **Summary**
 
-Looking at the [Redux Store]() reading, the `store` has a **reducer** function for updating its `state` that:
+Looking at the [Redux Store](https://open.appacademy.io/learn/swe-online/react/store) reading, the `store` has a **reducer** function for updating its `state` that:
   * gets the most updated state and an `action`
   * looks at `action.type` to determine, if state needs to be changed
   * returns the new state
@@ -26,7 +26,7 @@ As you can see, intial state is set to a default value of a blank array []. The 
 
 ### **Immutable State**
 
-Inside a Redux reducer, `state` and `action` can **never** be mutated. Your reducer **[must]()** return a new object, if the state changes. One way to ensure that state is not accidently mutated is to use `Object.freeze()`.
+Inside a Redux reducer, `state` and `action` can **never** be mutated. Your reducer **[must](https://redux.js.org/faq/immutable-data)** return a new object, if the state changes. One way to ensure that state is not accidently mutated is to use `Object.freeze()`.
 
 ![alt text](./Screen&#32;Shot&#32;2019-12-04&#32;at&#32;7.47.01&#32;PM.jpg)
 
@@ -60,7 +60,7 @@ Once our state grows so big, we need to think about managing slices of that stat
 
 The store now has to process new action types like `HIRE_FARMER` and `PAY_FARMER`, thus updating the `farmers` slice of state. Adding more cases to our original reducer will just clutter it up. Instead, we need to make another reducer to manage this new slice of state. 
 
-Having multiple reducers, each handling their own [slice]() of state is called **reducer composition**, that is the cornerstone of Redux applications. As such, each reducer's params `state` only represents that slice of the state it manages and the `actions` corresponds to it. 
+Having multiple reducers, each handling their own [slice](https://redux.js.org/recipes/structuring-reducers/basic-reducer-structure#basic-state-shape) of state is called **reducer composition**, that is the cornerstone of Redux applications. As such, each reducer's params `state` only represents that slice of the state it manages and the `actions` corresponds to it. 
 
 After standardizing our store state by having each reducer manaage only it's slice of state that it's responsible for, we need to update `combineReducers()` from the Redux package, to reflect this. We do this by mapping state keys to the reducers that handle each slice of state. Giving `combineReducers()` a single object that returns a single `reducer`, we can use to create our store. 
 
