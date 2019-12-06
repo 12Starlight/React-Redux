@@ -1,4 +1,6 @@
-# Exercises Phase 2
+# Exercises Phase 2 
+
+## **Redux**
 
 ### **Overall Structure**
 
@@ -38,4 +40,26 @@ At this point, there are a couple of things to notice. The action type must matc
       // here we are accessing the slice of state we want by using the correct key
       return { fruits: [...oldState.fruits, action.fruit] }
 
+&nbsp;
 
+### **Build Action Creators and Add to Window**
+
+![alt text](./Screen&#32;Shot&#32;2019-12-06&#32;at&#32;5.25.46&#32;PM.jpg "Build Action Creators")
+
+![alt text](./Screen&#32;Shot&#32;2019-12-06&#32;at&#32;5.28.27&#32;PM.jpg "Putting on the Window")
+
+&nbsp;
+
+### **Build Constants and Import to Reducer** 
+
+![alt text](./Screen&#32;Shot&#32;2019-12-06&#32;at&#32;5.37.56&#32;PM.jpg "Build Constants")
+
+![alt text](./Screen&#32;Shot&#32;2019-12-06&#32;at&#32;5.40.24&#32;PM.jpg "Import Constants to Reducer")
+
+&nbsp;
+
+Now that we have our `constants`, we pretty much have evething we need for setting up our Redux state managemnet.
+
+&nbsp;
+
+## **Containers and Components**

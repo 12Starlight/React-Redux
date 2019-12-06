@@ -1,3 +1,4 @@
+import { ADD_FRUIT, CLEAR_FRUIT } from './actions';
 
 const _defaultState = {
   fruits: []
@@ -8,11 +9,12 @@ const reducer = (oldState = _defaultState, action) => {
   Object.freeze(oldState);
 
   switch (action.type) {
-    case 'ADD_FRUIT':
+    case ADD_FRUIT:
       return { fruits: [...oldState.fruits, action.fruit] };
-    case 'CLEAR':
+    case CLEAR_FRUIT:
       return _defaultState;
     default:
+
       return oldState; 
   }
 }
