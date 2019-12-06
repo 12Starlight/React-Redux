@@ -56,10 +56,12 @@ At this point, there are a couple of things to notice. The action type must matc
 
 ![alt text](./Screen&#32;Shot&#32;2019-12-06&#32;at&#32;5.40.24&#32;PM.jpg "Import Constants to Reducer")
 
-&nbsp;
-
 Now that we have our `constants`, we pretty much have evething we need for setting up our Redux state managemnet.
 
 &nbsp;
 
-## **Containers and Components**
+## **Containers and Components** 
+
+### **Overall Structure**
+
+![alt text](./Screen&#32;Shot&#32;2019-12-06&#32;at&#32;5.53.39&#32;PM.jpg "Overall Structure")
