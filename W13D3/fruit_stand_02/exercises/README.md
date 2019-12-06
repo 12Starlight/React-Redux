@@ -64,4 +64,4 @@ Now that we have our `constants`, we pretty much have evething we need for setti
 
 ### **Overall Structure**
 
-![alt text](./Screen&#32;Shot&#32;2019-12-06&#32;at&#32;5.53.39&#32;PM.jpg "Overall Structure")
+![alt text](./Screen&#32;Shot&#32;2019-12-06&#32;at&#32;5.53.39&#32;PM.jpg "Overall Structure") 
