@@ -78,8 +78,35 @@ Now that we have our `constants`, we pretty much have evething we need for setti
 
 ![alt text](./Screen&#32;Shot&#32;2019-12-06&#32;at&#32;6.22.31&#32;PM.jpg "Presentational Component")
 
+Our `presentational component` must return one element only. 
+
 ![alt text](./Screen&#32;Shot&#32;2019-12-06&#32;at&#32;6.27.41&#32;PM.jpg "Import to Entry")
 
 A couple of things to notice here. We are not importing the `presentational component`. Instead, we are importing the `< FruitStandContainer />` that wraps our presentational component, thus our presentational component is by default returned too. Next, we have import statements that come directly from the `react` and `redux` library. It is best to separate these from your other component imports.  
 
 The `container component` is responsible for generating the props, while the `presentational component` is responsible for using the props. We get the `application state` from `connect()`. In order to give the `connect()` function our Redux application state which is passed to `mapStateToProps`, we have to use the `< Provider />`. The Provider has a `store` prop that makes our Redux store globaly available in our component hiarchy. 
+
+&nbsp;
+
+### **Putting It Together**
+
+![alt text](./Screen&#32;Shot&#32;2019-12-06&#32;at&#32;6.40.15&#32;PM.jpg "Putting It Together")
+
+&nbsp;
+
+### **Adding Event Handlers and Creating Prop Keys that Dispatch Action Creators**
+
+![alt text](./Screen&#32;Shot&#32;2019-12-06&#32;at&#32;6.57.48&#32;PM.jpg "Adding Event Hanlders")
+
+![alt text](./Screen&#32;Shot&#32;2019-12-06&#32;at&#32;6.58.53&#32;PM.jpg "Creating Prop Keys that Dispatch Action Creators")
+
+&nbsp;
+
+![alt text](./Screen&#32;Shot&#32;2019-12-06&#32;at&#32;7.03.49&#32;PM.jpg "User Interface")
+
+
+A few things to notice here. It is important that our presentational component uses the `onClick={}` event handler and passes only the name of the `prop` to make the site iteractive for our user. Next, in the container we want to pass as an argument the `invoked action creator`. Last, we are able to access our `props key` directly by using `object deconstruction`.  
+
+
+
+
