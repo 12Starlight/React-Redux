@@ -1,8 +1,12 @@
+// react /redux imports
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 
+// component imports 
 import store from './store';
 import { addOrange, addApple, clearFruit } from './actions';
+import FruitStandContainer from './components/fruit_stand_container';
 
 // code to test on the window
 window.store = store; 
@@ -12,7 +16,9 @@ window.clearFruit = clearFruit;
 
 
 const App = () => (
-	<div>Hello World</div>
+	<Provider store={store} >
+		<FruitStandContainer />
+	</Provider>
 );
 
 document.addEventListener("DOMContentLoaded", () => {

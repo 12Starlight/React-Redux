@@ -74,3 +74,12 @@ Now that we have our `constants`, we pretty much have evething we need for setti
 
 &nbsp;
 
+### **Build Fruit Stand Presentational Compoenent and Import to Entry**
+
+![alt text](./Screen&#32;Shot&#32;2019-12-06&#32;at&#32;6.22.31&#32;PM.jpg "Presentational Component")
+
+![alt text](./Screen&#32;Shot&#32;2019-12-06&#32;at&#32;6.27.41&#32;PM.jpg "Import to Entry")
+
+A couple of things to notice here. We are not importing the `presentational component`. Instead, we are importing the `< FruitStandContainer />` that wraps our presentational component, thus our presentational component is by default returned too. Next, we have import statements that come directly from the `react` and `redux` library. It is best to separate these from your other component imports.  
+
+The `container component` is responsible for generating the props, while the `presentational component` is responsible for using the props. We get the `application state` from `connect()`. In order to give the `connect()` function our Redux application state which is passed to `mapStateToProps`, we have to use the `< Provider />`. The Provider has a `store` prop that makes our Redux store globaly available in our component hiarchy. 
