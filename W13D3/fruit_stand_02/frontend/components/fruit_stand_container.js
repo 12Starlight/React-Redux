@@ -2,17 +2,20 @@ import { connect } from 'react-redux';
 import { addApple, addOrange, clearFruit } from '../actions';
 import FruitStand from './fruit_stand';
 
-const mapStateToProps = state => ({
-  fruits: state.fruits
+
+// mapStateToProps 
+// passes in state and ownProps
+const mapStateToProps = (state) => ({
+  fruits: state.fruits 
 });
 
-const mapDispatchToProps = dispatch => ({
-  addApple: () => dispatch(addApple()),
-  addOrange: () => dispatch(addOrange()),
-  clearFruit: () => dispatch(clearFruit())
-});
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(FruitStand);
+// connect is a currying function that returns another function
+// this is why we can attach (FruitStand) at the end, invoking it 
+export default connect(mapStateToProps)(FruitStand);
+
+
+
+
+
+
