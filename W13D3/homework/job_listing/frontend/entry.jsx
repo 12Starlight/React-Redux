@@ -10,8 +10,8 @@ import reducer from './reducer';
 
 document.addEventListener("DOMContentLoaded", () => {
   // code to test on the window
-  window.selectLocation = selectLocation;
-  window.reducer = reducer; 
+  // window.selectLocation = selectLocation;
+  // window.reducer = reducer; 
 
 
   const root = document.getElementById('root');
