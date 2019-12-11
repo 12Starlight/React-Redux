@@ -1,6 +1,10 @@
+// react /redux imports 
 import React from 'react';
+
+// component imports 
 import Job from './job';
-import selectLocation from './../actions';
+import { selectLocation } from '../actions';
+
 
 class Widget extends React.Component {
 
