@@ -1,10 +1,15 @@
 import React from 'react';
-import { allTodos } from '../../reducers/selectors';
+import TodoListItem from './todo_list_item';
 
 
 export default ({ todos }) => {
-  let allTodos = todos.map((todo, idx) => {
-    return <li key={idx}>{todo.title}</li>
+  let allTodos = todos.map((todo) => {
+    return(
+      <TodoListItem 
+        key={todo.id}
+        todo={todo}
+      />
+    ) 
   })
   
  return(
