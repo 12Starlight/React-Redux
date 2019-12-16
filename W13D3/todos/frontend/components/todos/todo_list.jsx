@@ -6,7 +6,7 @@ export default ({ todos }) => {
   let allTodos = todos.map((todo) => {
     return(
       <TodoListItem 
-        key={todo.id}
+        key={todo.id} // the key must be within a map function bc it is what React is looking at
         todo={todo}
       />
     ) 
