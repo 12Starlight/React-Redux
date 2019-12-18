@@ -8,11 +8,23 @@ class TodoForm extends React.Component {
 
     this.state = {
       // this is where the local state goes
+      id: '',
+      title: '',
+      body: '',
+      done: false 
     }
+
+    this.update = this.update.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleSubmit(e) {
-    e.preventDefault();
+  update(e) {
+    // e.preventDefault();
+    this.setState({ body: e.currentTarget.value });
+  }
+
+  handleSubmit() {
+    return this.props.receiveTodo(this.state.todos);
   }
 
 
@@ -20,9 +32,9 @@ class TodoForm extends React.Component {
   render() {
 
     return(
-      <form onSubmit={} >
-      
-        <input value={} />
+      <form >
+        <input onChange={ this.update } value={ this.state.body } />
+        <button onSubmit={ this.handleSubmit } >Create Todo</button>
       </form>
     )  
   }
