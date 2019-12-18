@@ -8,7 +8,7 @@ class TodoForm extends React.Component {
 
     this.state = {
       // this is where the local state goes
-      id: uniqueId(), // assigns a unique id to the property `id`
+      id: '', 
       title: '',
       body: '',
       done: false 
@@ -26,7 +26,7 @@ class TodoForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.setState({ title: '', body: ''}) // resets the local state after submit
-    // this.state.id = uniqueId(); 
+    this.state.id = uniqueId(); // assigns a unique id to the property `id`
     this.props.receiveTodo(this.state); // must pass in an object
   }
 
