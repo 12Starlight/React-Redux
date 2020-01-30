@@ -32,4 +32,4 @@ React W13D5 Outline
     - Learn how to create a React-Redux frontend app using jBuilder
 
 
-Need to make sure this still works
+Need to make sure this still works. Double checking that this works : D
