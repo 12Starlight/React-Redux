@@ -1,0 +1,46 @@
+# W13D1
+
+Understanding how our package.json is controlling our packages
+- Webpack: Using the imports and exports to bundle all the files into one file
+- Object Destructing:
+    - Make sure you understand how nested objects work with object destructuring
+    - Renaming variables in object destructuring
+- Import/export:
+    - The difference between export const and default
+    - How to import an export const
+    - How to import an export default
+    - How to use ‘../’ and ‘./’
+- Quiz
+- Props and State Reading:
+    - Play around with the Fido code
+    - Make sure you understand how props go into a component (only one way)
+    - A component can never change its own props
+    - State can be changed by its own component (but not by its parent component)
+    - Understand when to use State
+        - Come up with an example in your head for it
+    - When does a component re-render?
+    - Understand that setState is asynchronous and it can take two arguments.
+        - Understand what type those arguments are and what they do
+- React Components reading
+    - The files listed here are the bare minimum to get a simple React project up
+    - Render a simple react app using these 4 files listed
+        - To set up package.json, use the command `npm init —y`
+        - Only reading you should look at is webpack.config.js
+- Component Lifecycle Methods reading:
+    - Ask yourself when each component lifecycle methods are called
+- Click counter demo: Play around with the click counter demo
+    - How state in a component is initialized
+        - Play around with state initialization (maybe don’t include the initialization and see what happens)
+    - How state can be manipulated
+        - Based on user input (clicks, onchange, etc)
+    - See how counts is being imported
+    - Difference between functional and class components
+        - Want a class when:
+            - 1) you need state
+            - 2) AND/OR you want to use lifecycle methods
+- Do Getting Started with NPM
+- React calculator:
+    - use all lifecycle methods and state
+- Widgets:
+    - Skip Phase 4 if you can’t get the api to work after 30 min
+    - Bonus is really cool if you can get around to it

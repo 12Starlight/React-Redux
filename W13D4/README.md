@@ -1,0 +1,61 @@
+React W13D4 Outline
+- Higher-Order Functions Reading
+    - Functions that either receive other functions or return them
+    - What is a callback function?
+    - What is a free variable?
+    - What is a closure?
+    - How do free variables and closures work hand in hand?
+    - What is currying?
+    - How can you use fat-arrow functions to easily write a higher-order function?
+- Middleware Reading
+    - What is a middleware?
+    - What is a Redux middleware?
+        - What are several things that the Redux middleware can do?
+        - What are we using Redux middleware for?
+    - How do we use applyMiddleware?
+    - How does applyMiddleware work?
+        - What is a function signature of applyMiddleware?
+        - What does calling `next(action)` do?
+    - What are some middleware that we will be using?
+        - Logger needs to be the last middleware in applyMiddleware. Why?
+- Thunks Reading
+    - What does the thunk middleware do?
+        - It solves the problem of needing to dispatch a regular action to our store after our asynchronous API call comes back. How does it do this?
+- Object.freeze Reading
+    - Why must a reducer never mutate its arguments?
+    - What does Object.freeze do?
+        - Is this a deep or shallow freeze?
+- Namespacing Reading
+    - What is a namespace?
+    - Why do we nest our endpoints under the API namespace?
+    - How do we nest routes under the API namespace in Rails?
+        - How do we define those controllers and views under the API namespace?
+- Debugging arrow functions Reading
+    - Why is it better to make arrow functions have explicit returns rather than implicit returns?
+    - How do we convert a fat-arrow function with implicit return to one with explicit return? (Practice this)
+- Middleware Homework
+    - Understand how applyMiddleware works
+    - Be able to describe how middleware fits in the Redux cycle (draw your own diagram based on how you think the action goes to the middleware/store/reducers)
+- Todos (Part 2)
+    - Learn how to integrate Rails into the frontend so that our todos can be persisted on the backend
+    - Phase 1: Rails API
+        - Remember how to make migrations and tables in Rails
+        - Know how to create a Todos controller under the API namespace
+        - Know how to create routes under the API namespace that serve JSON-formatted responses
+        - Know how to create a StaticPagesController that will render your one and only static HTML page
+        - Be able to test your API endpoints using Ajax
+    - Phase 2: Putting it all together
+        - Redefine where the bundled webpack file should go
+        - Know how to configure javascript files to be served up by Rails
+        - Define API Utils
+        - Know what the purpose of the Thunk middleware is
+        - Know how to create thunk action creators and how they fit in the Redux cycle
+        - Use thunk action creators in React components
+        - Know how to do error handling using thunk action creators
+    - Phase 3: Steps
+        - Know how to go from creating a feature from the backend all the way to the frontend
+    - Phase 4: Tags
+        - Know how to go from creating a feature from the backend all the way to the frontend
+    - Phase 5: Authentication
+        - Only allow users who are signed in to create new todos and only see their own todos
+    - No need to do bonus (unless you want to of course)

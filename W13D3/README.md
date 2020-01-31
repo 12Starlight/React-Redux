@@ -1,0 +1,70 @@
+- Store Reading:
+	- What does the store do?
+		- The store holds global state
+		- Updates the state with its reducers
+		- listens for actions that change the state
+		- Allows components to listen for changes in the state
+	- createStore()
+		- what arguments do they take?
+		- what does each argument do?
+	- Store functions
+		- getState() - what does it do?
+		- dispatch(action) - what does it do?
+		- subscribe(callback) - what does it do?
+	- what does an action always have?
+- Reducers Reading:
+	- A reducer is a function that returns the updated state based on the action.type
+	- It receives the current state and an action
+	- what will be the initial current state when the store initializes?
+	- if no case matches the action.type, then the reducer doesn’t care about the action and will return state unchanged
+	- Reducer must return new object IF the state changes
+	- how does combine reducers work?
+	- what is a slice of state?
+- Actions Reading:
+	- What is an action creator and what does it return?
+	- how do we dispatch an action?
+- Provider Reading:
+	- What’s the difference between having a Provider and not having a Provider wrapping your App?
+	- What does Provider allow us to do?
+- connect Reading:
+	- What arguments does connect function take?
+	- What does connect function return?
+	- How do we connect our presentational component using the connect function?
+	- mapStateToProps:
+		- What are the arguments to mapStateToProps?
+		- what is the return value?
+		- Where is that return value going?
+		- What is ownProps?
+	- mapDispatchToProps:
+		- What are the arguments to mapDispatchToProps?
+		- What is the return value?
+		- Where is that return value going?
+- Containers reading: 
+	- what is a container component?
+	- what is a presentational component?
+	- what are the differences between them?
+- Selectors reading:
+	- Selectors are functions
+	- what are they used for? what are the inputs and outputs?
+	- what is the purpose of a selector?
+- Window API reading: 
+	- what is the window?
+	- if you run your JavaScript code in the browser, the global context is the window
+	- how can we test using the window? (paired with the video, Testing on the Window)
+- Fruit Stand Demo:
+	- try the things they ask you to do in Phase II and after each one, ask yourself How did the DOM change in reaction to the thing you tried?
+	- Where did you import your store and how did you give access to the store to your App?
+	- see where and how they defined actions to test on the window
+- Homeworks:
+	- Job Listing: 
+		- this project is using the methods that you created in your Redux Lite project. See where they are using those methods
+		- how is the action influencing the reducer?
+		- how is the action hitting the reducer?
+- Todos Project Part 1: 
+	- Make note of the file structure
+	- Be able to see a slice of state and make actions and reducers for it
+	- Be able to test your actions on the console using the window
+	- Be able to make components that will display information from the store 
+	- Understand what selectors do and where they go and how they are used
+	- Be able to dispatch actions to the store on user input
+	- Understand how to make child components with their own container components
