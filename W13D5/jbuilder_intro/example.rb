@@ -139,4 +139,30 @@ end
     "username": "Bob"
   }
 }
+ 
 
+# json.extract! lets us extract attributes from an instance directly
+# jbuilder:
+json.extract! @user, :fullname, :company, :email 
+
+# response: 
+{
+  "fullname": "Blue Jay",
+  "company": "StarlightCapital, LLC.",
+  "email": "startlightcapital@gmail.com"
+}
+
+# We can use json.set! to set keys that we need to first evaluate as variables:
+# jbuilder:
+json.set! @user.id do # this needs to be evaluated first
+  json.extract! @user, :fullname, :company, :email 
+end
+
+# response
+{
+  1: { # got evaluated
+    "fullname": "Blue Jay",
+    "company": "StarlightCapital, LLC.",
+    "email": "starlightcapital@gmail.com"
+  }
+}

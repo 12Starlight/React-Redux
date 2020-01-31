@@ -90,4 +90,21 @@ Now we are talking! Since rails evaluates `Jbuilder` views similarly to how it h
 
 To specify a key in the response, we can use the syntax: <kbd>json.some_key some_value</kbd>. The value can either be any valid data type, or a **`block that defines a nested scope`**.
 
-![alt text](./Images/Screen&#32;Shot&#32;2020-01-30&#32;at&#32;11.26.56&#32;PM.jpg)
+![alt text](./Images/Screen&#32;Shot&#32;2020-01-30&#32;at&#32;11.26.56&#32;PM.jpg "How Jbuilder Works Example")
+
+&nbsp;
+
+#### **json.extract!**
+
+<kbd>json.extract!</kbd> lets us extract attributes from an instance directly:
+
+![alt text](./Images/Screen&#32;Shot&#32;2020-01-30&#32;at&#32;11.42.02&#32;PM.jpg "Json.extract! Example")
+
+
+&nbsp;
+
+#### **json.set!**
+
+We can use <kbd>json.set!</kbd> to set keys that we need to first evaluate as variables:
+
+![alt text](./Images/Screen&#32;Shot&#32;2020-01-30&#32;at&#32;11.39.33&#32;PM.jpg "Json.set! Example")
