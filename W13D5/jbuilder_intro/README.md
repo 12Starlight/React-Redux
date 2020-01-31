@@ -39,7 +39,7 @@ As you can notice, we constructed a hash from scratch that ONLY contains the dat
 
 Now this works, but to what extent? I mean, do we really want to smash all this logic into our one controller? As this gets more and more complicated, things will definitely become harder to manage. 
 
-We can do better. We will do better. Enger <kbd>Jbuilder</kbd> 😉	
+We can do better. We will do better. Enter <kbd>Jbuilder</kbd> 😉	
 
 With Jbuilder, rails allows us to use our <kbd>views</kbd> folder to create `JSON` templets for our responses. Instead of building HTML views, we can now enjoy the power of <kbd>JSON</kbd> `views` using Jbuilder and ruby code!
 
@@ -83,3 +83,11 @@ Using this view, the JSON response would look like:
 Now we are talking! Since rails evaluates `Jbuilder` views similarly to how it handles HTML templates, we can access instance variables (like @user) defined in the controller that renders the view, as well as any of their <kbd>associations</kbd>. Jbuilder views can use regular ruby code, but also uses special methods defined by Jbuilder. The [Jbuilder docs](https://github.com/rails/jbuilder) have the best and most detailed information about each of these methods. For now though, we can cover the most common ones here:
 
 &nbsp;
+
+### **Some common Jbuilder methods**
+
+<kbd>json.'<some_key>'</kbd>
+
+To specify a key in the response, we can use the syntax: <kbd>json.some_key some_value</kbd>. The value can either be any valid data type, or a **`block that defines a nested scope`**.
+
+![alt text](./Images/Screen&#32;Shot&#32;2020-01-30&#32;at&#32;11.26.56&#32;PM.jpg)

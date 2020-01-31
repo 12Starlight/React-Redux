@@ -104,3 +104,39 @@ end
     }
   }
 }
+
+
+=begin 
+
+How Jbuilder works with JSON
+
+To specify a key in the response, we can use the syntax: 
+  json.some_key some_value
+
+The value can be either a valid data type, or a do block that defines a nested 
+scope
+
+=end
+
+# Value is valid data type "Bob"
+# jbuilder:
+json.username "Bob"
+
+# response:
+{ "username": "Bob" }
+
+# Value is a do block 
+# jbuilder:
+json.title "The first post"
+json.author do 
+  json.username "Bob"
+end
+
+# response:
+{
+  "title": "The first post",
+  "author": {
+    "username": "Bob"
+  }
+}
+
