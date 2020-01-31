@@ -166,3 +166,27 @@ end
     "email": "starlightcapital@gmail.com"
   }
 }
+
+# Configuring Rails To Look For Jbuilder Views
+# routes.rb
+
+Rails.application.routes.draw do 
+  namespace :api, defaults: { format: :json } do
+    resources :pokemon, only: [:index, :show, :create, :destroy]
+  end
+end
+
+# Partials can also be used just like with ERB as shown in the directory 
+# structure below
+=begin 
+ 
+instagram_clone
+  |_ app
+    |_ ...
+    |_ views
+      |_ photos
+        |_ index.json.jbuilder
+        |_ show.json.jbuilder
+        |_ _photo.json.jbuilder # here a partial is being used
+
+=end 

@@ -108,3 +108,11 @@ To specify a key in the response, we can use the syntax: <kbd>json.some_key some
 We can use <kbd>json.set!</kbd> to set keys that we need to first evaluate as variables:
 
 ![alt text](./Images/Screen&#32;Shot&#32;2020-01-30&#32;at&#32;11.39.33&#32;PM.jpg "Json.set! Example")
+
+&nbsp;
+
+### **Configuring rails to look for Jbuilder views**
+
+You want to make sure to set the <kbd>default</kbd> format of resources (in the `config/routes.rb` file) to <kbd>:json</kbd>. Then Rails will automatically look for a <kbd>.json</kbd> file when you pass a template name to <kbd>#render</kbd> (<kbd>render: index</kbd> for example)
+
+![alt text](./Images/Screen&#32;Shot&#32;2020-01-30&#32;at&#32;11.54.46&#32;PM.jpg "Configuring Rails For Jbuilder Views Example")
