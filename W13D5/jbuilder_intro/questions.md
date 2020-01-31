@@ -6,7 +6,7 @@ What are the side effects of using `render json: @users`?
 &nbsp;
 
 What are two reasons we want to use jbuilder over `render json:`?
->Answer: <kbd>Filter data we send up</kbd> and <kbd>Addmore to the data we send up</kbd>
+>Answer: <kbd>Filter data we send up</kbd> and <kbd>Add more to the data we send up</kbd>
 
 &nbsp;
 
@@ -16,12 +16,12 @@ Where do we put our json.jbuilder files?
 &nbsp;
 
 What are some jbuilder methods we can use and how do they change our json respones?
->Answer: <kbd>jbuilder.extract!</kbd> which lets us extract attributes from an instance directly and <kdb>json.set!</kdb> which allows to set keys that need to be evaluated first. 
+>Answer: <kbd>jbuilder.extract!</kbd> which lets us extract attributes from an instance directly and <kbd>json.set!</kbd> which allows to set keys that need to be evaluated first. 
 
 &nbsp;
 
 How do we make our routes that return json default to returning json instead of html?
->Answer: We want to set t he default format of resources in `config/routes.rb` to <kbd>:json</kbd>. So, it would look like the following:
+>Answer: We want to set the default format of resources in `config/routes.rb` to <kbd>:json</kbd>. So, it would look like the following:
 
       Rails.application.routes.draw do 
         namespace :api, defaults: { format: :json } do
