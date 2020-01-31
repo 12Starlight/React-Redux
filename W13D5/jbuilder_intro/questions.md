@@ -16,7 +16,7 @@ Where do we put our json.jbuilder files?
 &nbsp;
 
 What are some jbuilder methods we can use and how do they change our json respones?
->Answer: <kbd>jbuilder.extract!</kbd> which lets us extract attributes from an instance directly and <kbd>json.set!</kbd> which allows to set keys that need to be evaluated first. 
+>Answer: <kbd>jbuilder.extract!</kbd> which lets us extract attributes from an instance directly and <kbd>json.set!</kbd> which allows us to set keys that need to be evaluated first. 
 
 &nbsp;
 
