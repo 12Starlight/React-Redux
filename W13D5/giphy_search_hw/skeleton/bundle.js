@@ -23947,15 +23947,27 @@ var giphysReducer = function giphysReducer() {
 /*!**********************************!*\
   !*** ./reducers/root_reducer.js ***!
   \**********************************/
-/*! no exports provided */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/index.js");
 /* harmony import */ var _giphys_reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./giphys_reducer */ "./reducers/giphys_reducer.js");
+// Import React Redux
+ // Import Reducers
 
+ // Build Reducer
 
+/* harmony default export */ __webpack_exports__["default"] = (Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
+  // functional reducer 
+  giphys: _giphys_reducer__WEBPACK_IMPORTED_MODULE_1__["default"]
+})); // More Complicated Example
+// const rootReducer = combineReducers({
+//   giphys: giphysReducer
+// })
+// 
+// export default rootReducer
 
 /***/ }),
 

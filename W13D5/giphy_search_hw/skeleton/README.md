@@ -122,3 +122,15 @@ Define <kbd>giphysReducer</kbd> in `giphys_reducer.js` to receive the previous s
 The following is what your reducer should look like:
 
 ![alt text](./Assets/Screen&#32;Shot&#32;2020-02-03&#32;at&#32;8.jpg "Giphys Reducer Example")
+
+&nbsp;
+
+**rootReducer**
+
+Recall earlier when we looked at state shape. The <kbd>giphysReducer</kbd> above should control the <kbd>giphys</kbd> slice of the application. We use a <kbd>rootReducer</kbd> with Redux's <kbd>combineReducers</kbd> function in order to give control to each reducer that manages their slice of state. This then, gets combined and becomes the `application state`.
+
+Given the simplicity of this project, we only need one reducer. However, it is good practice to still use <kbd>combineReducers</kbd>, so that in the future we can easily add other slices of state. 
+
+Now go ahead and import <kbd>combineReducers</kbd> and <kbd>giphysReducer</kbd>. Then make your rootReducer. It should resemble the following:
+
+![alt text](./Assets/Screen&#32;Shot&#32;2020-02-03&#32;at&#32;10.jpg "Simple Root Reducer Example")
