@@ -63,4 +63,29 @@ Once you have completed this, fill out the form for creating a new app, and only
 
 After submitting the form, you will get to the `dashboard`, and under the <kbd>Your Apps</kbd> section, you should see your newly created app with an API Key that you can use for the rest of this project!
 
+&nbsp;
+
+**API Util**
+
+Okay, now it is time to write a function <kbd>fetchSearchGiphys</kbd> in `api_util.js` to make an AJAX call to the Giphy API. It will have a single argument, the <kbd>searchTerm</kbd> entered by a user. Look at the [Giphy API docs](https://github.com/Giphy/GiphyAPI) for more details, but in short, we want to make a <GET> request to <kbd>http://api.giphy.com/v1/gifs/search?q=${search + term}&api_key=${YOUR_GIPHY_API_KEY}&limit=2</kbd>.
+  * Search term is replaced with our `'actual query'`
+  * actual [documentation]([)](https://developers.giphy.com/docs/api/endpoint#search) does **not** include `http://` and the actual API request does **NOT** have <kbd>${}</kbd> in it! So, take those out and just put your inputs instead. 
+  * the api request must be a **string**
+
+&nbsp;
+
+We tag <kbd>limit=2</kbd> onto the end of our query params to tell Giphy we only want **two GIF's back**. The giphy API is relatively slow, so keeping the response size down helps our app be a little faster. 
+
+For the best practice, let us test small pieces as we move along. Let us test out that AJAX request to make sure it is doing the right thing we intended. 
+
+Make sure <kbd>webpack -w</kbd>. Check to make sure our bundle.js file is getting updated. It has already been sourced for you in <kbd>index.html</kbd>.
+
+Now, open the <kbd>index.html</kbd> file in the browser. The jQuery <kbd>script</kbd> tag has already been added, so <kbd>$.ajax</kbd> will be defined. Import <kbd>fetchSearchGiphys</kbd> to the entry file, then go ahead and put it on the window so we have access to it in the console. Then run the following code:
+
+Code:
+![alt text](./Assets/Screen&#32;Shot&#32;2020-02-03&#32;at&#32;4.jpg "FetchSearchGiphys Test Example")
+
+Browser:
+![alt text](./Assets/Screen&#32;Shot&#32;2020-02-03&#32;at&#32;5.jpg "FetchSearchGiphys Browser Example")
+
 
