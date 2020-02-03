@@ -88,4 +88,25 @@ Code:
 Browser:
 ![alt text](./Assets/Screen&#32;Shot&#32;2020-02-03&#32;at&#32;5.jpg "FetchSearchGiphys Browser Example")
 
+&nbsp;
+
+This will make the AJAX request, which also returns a `promise`. We chain on a <kbd>then</kbd> to log the response data, once the response comes back. In our array, there should be two objects <kbd>(2) [{...}, {...}]</kbd>. These are our giphys! Do not move on until you can successfully get back an array of two objects. Then remove <kbd>fetchSearchGiphys</kbd> from the window once you are done testing. 
+
+&nbsp;
+
+**Actions** 
+
+Let us now, set up an action to properly receive giphys. Do not forget to export constants for our `action types` that point at strings of the same content:
+
+![alt text](./Assets/Screen&#32;Shot&#32;2020-02-03&#32;at&#32;6.jpg "Constant Example")
+
+&nbsp;
+
+Write and export <kbd>receiveSearchGiphys</kbd>, a function that receives <kbd>giphys</kbd> and returns an action object. This is our `Regular Action Creator`. The object should have a key for <kbd>type</kbd> and another for the <kbd>giphys</kbd> actual data. Your function should look like the following:
+
+![alt text](./Assets/Screen&#32;Shot&#32;2020-02-03&#32;at&#32;7.jpg "Regular Action Creator Example")
+
+&nbsp;
+
+Now to make this work, we need a reducer!
 
