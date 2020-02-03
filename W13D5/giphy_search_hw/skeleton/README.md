@@ -46,3 +46,21 @@ We want to keep in mind first how we want to `think` about the state shape befor
           // inside this array are {}, {}, {}, {}, {} giphy objects
         ]
       }
+
+&nbsp;
+
+**Giphy API Key**
+
+To get started, go ahead and create your `Giphy API Key` that we will use in our API requests to Giphy.
+
+Navigate to the [Giphy API Quick Start Guide](https://developers.giphy.com/docs/api/#quick-start-guide) and click <kbd>Create an App</kbd>. Make sure to create a giphy account. 
+
+Once you have completed this, fill out the form for creating a new app, and only check the option for <kbd>I only want to use the GIPHY API</kbd>. 
+
+![alt text](./Assets/Screen&#32;Shot&#32;2020-02-03&#32;at&#32;10.47.17&#32;AM.jpg "Giphy Create New App Example")
+
+&nbsp;
+
+After submitting the form, you will get to the `dashboard`, and under the <kbd>Your Apps</kbd> section, you should see your newly created app with an API Key that you can use for the rest of this project!
+
+
