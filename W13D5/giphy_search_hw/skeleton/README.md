@@ -4,7 +4,7 @@
 
 This homework is going to get us completely familiar with the full `Redux cycle`. We will create a Giphy search tool, by building out a single Redux cycle. A user will enter a search term, then the app will trigger a <kbd>Giphy API</kbd> to render an index of the results. Here is a screenshot of the completed project:
 
-![alt text](./Assets/Screen&#32;Shot&#32;2020-02-03&#32;at&#32;9.18.06&#32;AM.jpg "Completed Giphy Project Example")
+![alt text](./Assets/Screen&#32;Shot&#32;2020-02-03&#32;at&#32;1.jpg "Completed Giphy Project Example")
 
 &nbsp;
 
@@ -22,7 +22,7 @@ Make sure to download the [skeleton](https://open.appacademy.io/learn/swe-online
 
 Now that you have seen how the files are layed out, let us go over the hierarchy of the components:
 
-![alt text](Assets/Screen&#32;Shot&#32;2020-02-03&#32;at&#32;9.23.43&#32;AM.jpg "Component Hierarchy Example")
+![alt text](./Assets/Screen&#32;Shot&#32;2020-02-03&#32;at&#32;2.jpg "Component Hierarchy Example")
 
   * <kbd>Root</kbd>: As usual, it is responsible for connecting our component tree with the => <kbd>store</kbd>. It renders the => <kbd>GiphysSearchContainer</kbd>.
   * <kbd>GiphysSearchContainer</kbd>: **Container** for our <kbd>GiphysSearch</kbd> component.
@@ -57,7 +57,7 @@ Navigate to the [Giphy API Quick Start Guide](https://developers.giphy.com/docs/
 
 Once you have completed this, fill out the form for creating a new app, and only check the option for <kbd>I only want to use the GIPHY API</kbd>. 
 
-![alt text](./Assets/Screen&#32;Shot&#32;2020-02-03&#32;at&#32;10.47.17&#32;AM.jpg "Giphy Create New App Example")
+![alt text](./Assets/Screen&#32;Shot&#32;2020-02-03&#32;at&#32;3.jpg "Giphy Create New App Example")
 
 &nbsp;
 
