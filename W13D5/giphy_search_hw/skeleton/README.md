@@ -69,7 +69,7 @@ After submitting the form, you will get to the `dashboard`, and under the <kbd>Y
 
 Okay, now it is time to write a function <kbd>fetchSearchGiphys</kbd> in `api_util.js` to make an AJAX call to the Giphy API. It will have a single argument, the <kbd>searchTerm</kbd> entered by a user. Look at the [Giphy API docs](https://github.com/Giphy/GiphyAPI) for more details, but in short, we want to make a <GET> request to <kbd>http://api.giphy.com/v1/gifs/search?q=${search + term}&api_key=${YOUR_GIPHY_API_KEY}&limit=2</kbd>.
   * Search term is replaced with our `'actual query'`
-  * actual [documentation](https://developers.giphy.com/docs/api/endpoint#search) does **not** include `http://` and the actual API request does **NOT** have <kbd>${}</kbd> in it! So, take those out and just put your inputs instead. 
+  * actual [documentation](https://developers.giphy.com/docs/api/endpoint#search) does **not** include `http://`, so MAKE SURE TO INCLUDE IT and the actual API request does **NOT** have <kbd>${}</kbd> in it! So, take out ${} and just put your inputs instead. 
   * the api request must be a **string**
 
 &nbsp;
@@ -81,6 +81,9 @@ For the best practice, let us test small pieces as we move along. Let us test ou
 Make sure <kbd>webpack -w</kbd>. Check to make sure our bundle.js file is getting updated. It has already been sourced for you in <kbd>index.html</kbd>.
 
 Now, open the <kbd>index.html</kbd> file in the browser. The jQuery <kbd>script</kbd> tag has already been added, so <kbd>$.ajax</kbd> will be defined. Import <kbd>fetchSearchGiphys</kbd> to the entry file, then go ahead and put it on the window so we have access to it in the console. Then run the following code:
+
+Code:
+![alt text](./Assets/Screen&#32;Shot&#32;2020-02-03&#32;at&#32;9.jpg "API Code Example")
 
 Code:
 ![alt text](./Assets/Screen&#32;Shot&#32;2020-02-03&#32;at&#32;4.jpg "FetchSearchGiphys Test Example")
@@ -110,3 +113,12 @@ Write and export <kbd>receiveSearchGiphys</kbd>, a function that receives <kbd>g
 
 Now to make this work, we need a reducer!
 
+&nbsp;
+
+**giphysReducer**
+
+Define <kbd>giphysReducer</kbd> in `giphys_reducer.js` to receive the previous state and an action. Recall that a reducer **describes how that state should change** based on a <kbd>dispatched action</kbd>. We NEVER want to mutate the previous state, and instead want to return the **new state**. Alas, if the action does not change the state, we want the reducer to return `oldState`. Do not forget to import the <kbd>RECEIVE_SEARCH_GIPHYS</kbd> constant from our actions file. 
+
+The following is what your reducer should look like:
+
+![alt text](./Assets/Screen&#32;Shot&#32;2020-02-03&#32;at&#32;8.jpg "Giphys Reducer Example")
