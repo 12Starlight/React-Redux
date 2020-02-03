@@ -78,7 +78,7 @@ We tag <kbd>limit=2</kbd> onto the end of our query params to tell Giphy we only
 
 For the best practice, let us test small pieces as we move along. Let us test out that AJAX request to make sure it is doing the right thing we intended. 
 
-Make sure <kbd>webpack -w</kbd>. Check to make sure our bundle.js file is getting updated. It has already been sourced for you in <kbd>index.html</kbd>.
+Make sure to run your webpack scirpt, <kbd>webpack -w</kbd>. Check to make sure our bundle.js file is getting updated. It has already been sourced for you in <kbd>index.html</kbd>.
 
 Now, open the <kbd>index.html</kbd> file in the browser. The jQuery <kbd>script</kbd> tag has already been added, so <kbd>$.ajax</kbd> will be defined. Import <kbd>fetchSearchGiphys</kbd> to the entry file, then go ahead and put it on the window so we have access to it in the console. Then run the following code:
 
