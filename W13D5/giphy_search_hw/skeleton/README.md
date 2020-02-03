@@ -28,3 +28,21 @@ Now that you have seen how the files are layed out, let us go over the hierarchy
   * <kbd>GiphysSearchContainer</kbd>: **Container** for our <kbd>GiphysSearch</kbd> component.
   * <kbd>GiphysSearch</kbd>: renders the `search bar` and handles all of the *search logic* (keeping track of the query and triggering the AJAX request on submit); renders the => <kbd>GiphysIndex</kbd>.
   * <kbd>GiphysIndex</kbd>: iterates over the <kbd>giphys</kbd> in <kdb>props</kdb>, rendering a <kbd>GiphysIndexItem</kbd> for each one.  
+
+&nbsp;
+
+### **Phase 1: Redux Cycle**
+
+&nbsp;
+
+### **State Shape**
+
+We want to keep in mind first how we want to `think` about the state shape before we build our project. We want to display the giphy results returned by our AJAX request. So, it makes sense to create slices of state that represent <kbd>giphys</kbd> which hold a collection of <kbd>giphy</kbd> objects.
+
+      the state shape will be here
+      {
+        giphys: [
+          // notice **here** it is an array []
+          // inside this array are {}, {}, {}, {}, {} giphy objects
+        ]
+      }
