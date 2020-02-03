@@ -69,7 +69,7 @@ After submitting the form, you will get to the `dashboard`, and under the <kbd>Y
 
 Okay, now it is time to write a function <kbd>fetchSearchGiphys</kbd> in `api_util.js` to make an AJAX call to the Giphy API. It will have a single argument, the <kbd>searchTerm</kbd> entered by a user. Look at the [Giphy API docs](https://github.com/Giphy/GiphyAPI) for more details, but in short, we want to make a <GET> request to <kbd>http://api.giphy.com/v1/gifs/search?q=${search + term}&api_key=${YOUR_GIPHY_API_KEY}&limit=2</kbd>.
   * Search term is replaced with our `'actual query'`
-  * actual [documentation]([)](https://developers.giphy.com/docs/api/endpoint#search) does **not** include `http://` and the actual API request does **NOT** have <kbd>${}</kbd> in it! So, take those out and just put your inputs instead. 
+  * actual [documentation](https://developers.giphy.com/docs/api/endpoint#search) does **not** include `http://` and the actual API request does **NOT** have <kbd>${}</kbd> in it! So, take those out and just put your inputs instead. 
   * the api request must be a **string**
 
 &nbsp;
