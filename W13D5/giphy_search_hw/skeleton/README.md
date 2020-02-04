@@ -134,3 +134,39 @@ Given the simplicity of this project, we only need one reducer. However, it is g
 Now go ahead and import <kbd>combineReducers</kbd> and <kbd>giphysReducer</kbd>. Then make your rootReducer. It should resemble the following:
 
 ![alt text](./Assets/Screen&#32;Shot&#32;2020-02-03&#32;at&#32;10.jpg "Simple Root Reducer Example")
+
+&nbsp;
+
+**Store** 
+
+In order to test our reducer we need create our store which holds our <kbd>global state</kbd>. In Redux, remember that <kbd>createStore</kbd> receives <kbd>reducer</kbd>, optional <kbd>preloadedState</kbd>, and an optional <kbd>enhancer</kbd>. We will begin by writing a <kbd>configureStore</kbd> function that passes our <kbd>rootReducer</kbd> as the reducer `argument` to <kbd>createStore</kbd>.
+
+![alt text](./Assets/Screen&#32;Shot&#32;2020-02-04&#32;at&#32;11.jpg "ConfigureStore Example")
+
+&nbsp;
+
+Once we have everything built, we want to make sure to include it in our entry file. So, make sure to import <kbd>configureStore</kbd>.
+
+Then include it inside the <kbd>DOMContentLoaded</kbd> callback. After this is all done and our store is ready to go, it is time to test the `reducer` and `action creator`!
+  * put the store on the window as <kbd>window.store = store</kbd>.
+  * import the <kbd>fetchSearchGiphys</kbd> API and the <kbd>receiveSearchGiphys</kbd> action creator, then add them to the window as well.
+  
+
+Code
+![alt text](./Assets/Screen&#32;Shot&#32;2020-02-04&#32;at&#32;13.jpg "Store Example")
+
+![alt text](./Assets/Screen&#32;Shot&#32;2020-02-04&#32;at&#32;14.jpg "Adding Store And ReceiveSearchGiphys To Window Example")
+
+&nbsp;
+  
+Use the following code to test your logic before moving on.
+
+Code:
+![alt text](./Assets/Screen&#32;Shot&#32;2020-02-04&#32;at&#32;12.jpg "Testing Store In Console Code Example")
+
+Browswer:
+![alt text](./Assets/Screen&#32;Shot&#32;2020-02-04&#32;at&#32;15.jpg "Testing Store With ReceiveSearchGiphys And FetchSearchGiphys Example")
+
+&nbsp;
+
+Notice the test above directly makes the `API call` and uses a promise to include the <kbd>receiveSearchGiphys</kbd> action creator. Using this pattern in our components would make our app difficult to maintain -- each change to app state **should come from an action creator**.
