@@ -161,7 +161,6 @@ Code:
   
 Use the following code to test your logic before moving on.
 
-Code:
 ![alt text](./Assets/Screen&#32;Shot&#32;2020-02-04&#32;at&#32;12.jpg "Testing Store In Console Code Example")
 
 Browswer:
@@ -201,7 +200,6 @@ Make sure that following is now included in `store/store.js`:
 
 And **WALLLAa** this is it : D This concludes the entire Redux cycle. Go ahead and test everything now! Import <kbd>fetchSearchGiphys</kbd> from your actions file to your entry and put it on the window. Then try the following code in the browswer and make sure everything is working properly before moving on:
 
-Code:
 ![alt text](./Assets/Screen&#32;Shot&#32;2020-02-04&#32;at&#32;18.jpg "Thunk Action Creator Code Example")
 
 Browser:
