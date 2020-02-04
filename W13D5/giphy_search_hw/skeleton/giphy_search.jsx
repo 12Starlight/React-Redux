@@ -5,7 +5,8 @@ import configureStore from './store/store';
 import Root from './components/root';
 
 // Component Imports
-import { fetchSearchGiphys } from './util/api_util';
+// import { fetchSearchGiphys } from './util/api_util';
+import { fetchSearchGiphys } from './actions/giphy_actions';
 import { receiveSearchGiphys } from './actions/giphy_actions';
 
 
@@ -14,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const store = configureStore();
 
   // code to test
+  // window.fetchSearchGiphys = fetchSearchGiphys;
   window.fetchSearchGiphys = fetchSearchGiphys;
   window.receiveSearchGiphys = receiveSearchGiphys; 
   window.store = store; 

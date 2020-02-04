@@ -14,4 +14,11 @@ export const receiveSearchGiphys = (giphys) => {
 };
 
 
+// Thunk Action Creator
+export const fetchSearchGiphys = (searchTerm) => {
+  return (dispatch) => {
+    APIUtil.fetchSearchGiphys(searchTerm)
+      .then(giphysPromise => dispatch(receiveSearchGiphys(giphysPromise.data)));
+  }
+} 
 

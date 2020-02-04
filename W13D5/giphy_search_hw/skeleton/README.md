@@ -152,7 +152,7 @@ Then include it inside the <kbd>DOMContentLoaded</kbd> callback. After this is a
   * import the <kbd>fetchSearchGiphys</kbd> API and the <kbd>receiveSearchGiphys</kbd> action creator, then add them to the window as well.
   
 
-Code
+Code:
 ![alt text](./Assets/Screen&#32;Shot&#32;2020-02-04&#32;at&#32;13.jpg "Store Example")
 
 ![alt text](./Assets/Screen&#32;Shot&#32;2020-02-04&#32;at&#32;14.jpg "Adding Store And ReceiveSearchGiphys To Window Example")
@@ -170,3 +170,44 @@ Browswer:
 &nbsp;
 
 Notice the test above directly makes the `API call` and uses a promise to include the <kbd>receiveSearchGiphys</kbd> action creator. Using this pattern in our components would make our app difficult to maintain -- each change to app state **should come from an action creator**.
+
+&nbsp;
+
+### **Thunk Middleware**
+
+Now that we have a better idea of how everything works, let us now refactor it a little bit. We want to fetch giphys using a `Thunk Action Creator`. Remember that thunk action creators return a function, that when called with an argument of dispatch, can dispatch **additional** actions. 
+
+This `Thunk Action Creator` should dispatch <kbd>receiveSearchGiphys</kbd> after the Giphy API call is successful.
+  * Import our API functions into `actions/giphy_actions.js` as <kbd>import * as APIUtil from '../util/api_util';</kbd>
+  * Export a function <kbd>fetchSearchGiphys</kbd> that 
+    * Receives a search term
+    * Returns a function that can be called with <kdb>dispatch</kdb> and uses a promise to dispatch <kdb>receiveSearchGiphys</kdb> with the received data after <kbd>APIUtil.fetchSearchGiphys</kbd> is successful. 
+
+&nbsp;
+
+Your `Thunk Action Creator` should look like the following:
+
+![alt text](./Assets/Screen&#32;Shot&#32;2020-02-04&#32;at&#32;16.jpg "Thunk Action Creator Example")
+
+&nbsp;
+
+Next we want to refactor our <kbd>configureStore</kbd> function in `store/store.js` to incorporate your `Thunk Action Creator`. Redux provides <kbd>thunk</kbd> middleware from the <kbd>redux-thunk</kbd> module. We will import Redux's <kbd>thunk</kbd> middleware and <kbd>applyMiddleware</kbd> function.
+
+Make sure that following is now included in `store/store.js`:
+
+![alt text](./Assets/Screen&#32;Shot&#32;2020-02-04&#32;at&#32;17.jpg "Updating Store To Include Thunk And ApplyMiddleware Example")
+
+&nbsp;
+
+And **WALLLAa** this is it : D This concludes the entire Redux cycle. Go ahead and test everything now! Import <kbd>fetchSearchGiphys</kbd> from your actions file to your entry and put it on the window. Then try the following code in the browswer and make sure everything is working properly before moving on:
+
+Code:
+![alt text](./Assets/Screen&#32;Shot&#32;2020-02-04&#32;at&#32;18.jpg "Thunk Action Creator Code Example")
+
+Browser:
+![alt text](./Assets/Screen&#32;Shot&#32;2020-02-04&#32;at&#32;19.jpg "Testing Thunk Action Creator On Console Example")
+
+&nbsp;
+
+### **Phase 2: React Components**
+
