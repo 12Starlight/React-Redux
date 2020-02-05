@@ -224,6 +224,7 @@ In your entry file, make sure to import this <kbd>Root</kbd> component. Then upd
 Make sure to actually define your `giphys_search_container.jsx` due to the <kbd>Provider</kbd> needing a component to wrap around or else an error will be thrown. 
 
 Code:
+
 ![alt text](./Assets/Screen&#32;Shot&#32;2020-02-04&#32;at&#32;21.jpg "Adding Root To Entry Example")
 
 ![alt text](./Assets/Screen&#32;Shot&#32;2020-02-05&#32;at&#32;23.jpg "Functional Component Example")
