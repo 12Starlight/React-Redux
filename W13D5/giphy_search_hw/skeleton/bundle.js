@@ -183,12 +183,27 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+ // export default () => ( // Created functional component to test
+//   <div>I AM A COMPONENT</div>
+// );
+// mapStateToProps
 
-/* harmony default export */ __webpack_exports__["default"] = (function () {
-  return (// Created functional component to test
-    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "I AM A COMPONENT")
-  );
-});
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    giphys: state.giphys
+  };
+}; // mapDispatchToProps
+
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    fetchSearchGiphys: function fetchSearchGiphys(searchTerm) {
+      return dispatch(Object(_actions_giphy_actions__WEBPACK_IMPORTED_MODULE_3__["fetchSearchGiphys"])(searchTerm));
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(_giphys_search__WEBPACK_IMPORTED_MODULE_2__["default"]));
 
 /***/ }),
 

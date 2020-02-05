@@ -228,3 +228,28 @@ Code:
 ![alt text](./Assets/Screen&#32;Shot&#32;2020-02-04&#32;at&#32;21.jpg "Adding Root To Entry Example")
 
 ![alt text](./Assets/Screen&#32;Shot&#32;2020-02-05&#32;at&#32;23.jpg "Functional Component Example")
+
+&nbsp;
+
+### **Giphys Search**
+
+In order for users to be able to search, a presentational and container component must be created. Container components `subscribe` to the store, read state, and pass props while **presentational components render the user interface**.
+
+**Giphys Search Container**
+
+In `components/giphys_search_container.js`, let us create the container component for search. We already have <kbd>connect</kbd>, <kbd>GiphysSearch</kbd>, and <kbd>fetchSearchGiphys</kbd> imported for us.
+  * define <kbd>mapStateToProps</kbd>
+
+![alt text](./Assets/Screen&#32;Shot&#32;2020-02-05&#32;at&#32;24.jpg "GiphysSearchContainer MapStateToProps Example")
+
+&nbsp;
+
+  * define <kbd>mapDispatchToProps</kbd>
+
+![alt text](./Assets/Screen&#32;Shot&#32;2020-02-05&#32;at&#32;25.jpg "GiphysSearchContainer MapDispatchToProps Example")
+
+&nbsp;
+
+  * <kbd>connect</kbd> the <kbd>GiphysSearch</kbd> component and export 
+
+![alt text](./Assets/Screen&#32;Shot&#32;2020-02-05&#32;at&#32;26.jpg "GiphysSearchContainer Connect(msp, mdp)(prezComponent) Example")
