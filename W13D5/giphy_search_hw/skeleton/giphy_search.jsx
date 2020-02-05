@@ -21,7 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
   window.store = store; 
 
 
-  ReactDOM.render(<div>React is working ;)</div>, root);
+  // ReactDOM.render(<div>React is working ;)</div>, root);
+  ReactDOM.render(<Root store={store} />, root);
 });
 
 

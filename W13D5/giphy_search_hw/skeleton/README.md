@@ -209,3 +209,21 @@ Browser:
 
 ### **Phase 2: React Components**
 
+**Root Component**
+
+In `root.jsx` it is time to create a functional component that renders **all** our app's React components. This component should pass in the app's Redux <kbd>store</kbd> as a prop. Then wrap all of the components in our app with a <kbd>Provider</kbd> from <kbd>react-redux</kbd>.
+
+The following is what your <kbd>Root</kbd> component should look like:
+
+![alt text](./Assets/Screen&#32;Shot&#32;2020-02-04&#32;at&#32;20.jpg "Root Component Example")
+
+&nbsp;
+
+In your entry file, make sure to import this <kbd>Root</kbd> component. Then update your <kbd>DOMContentLoaded</kbd> second argument to reflect the changes, by passing in the store to the `callback`. Then render the applicaiton's Redux store by using your <kbd>Root</kbd> component. 
+
+Make sure to actually define your `giphys_search_container.jsx` due to the <kbd>Provider</kbd> needing a component to wrap around or else an error will be thrown. 
+
+Code:
+![alt text](./Assets/Screen&#32;Shot&#32;2020-02-04&#32;at&#32;21.jpg "Adding Root To Entry Example")
+
+![alt text](./Assets/Screen&#32;Shot&#32;2020-02-05&#32;at&#32;23.jpg "Functional Component Example")

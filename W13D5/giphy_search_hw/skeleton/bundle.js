@@ -170,17 +170,25 @@ __webpack_require__.r(__webpack_exports__);
 /*!************************************************!*\
   !*** ./components/giphys_search_container.jsx ***!
   \************************************************/
-/*! no exports provided */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _giphys_search__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./giphys_search */ "./components/giphys_search.jsx");
-/* harmony import */ var _actions_giphy_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../actions/giphy_actions */ "./actions/giphy_actions.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/react.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _giphys_search__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./giphys_search */ "./components/giphys_search.jsx");
+/* harmony import */ var _actions_giphy_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../actions/giphy_actions */ "./actions/giphy_actions.js");
 
 
 
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  return (// Created functional component to test
+    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "I AM A COMPONENT")
+  );
+});
 
 /***/ }),
 
@@ -188,7 +196,7 @@ __webpack_require__.r(__webpack_exports__);
 /*!*****************************!*\
   !*** ./components/root.jsx ***!
   \*****************************/
-/*! no exports provided */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -197,9 +205,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _giphys_search_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./giphys_search_container */ "./components/giphys_search_container.jsx");
+// Import React Redux
 
+ // Import Components
 
+ // Build Root Component
 
+var Root = function Root(_ref) {
+  var store = _ref.store;
+  // store gets passed in as an argument to Provider 
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_redux__WEBPACK_IMPORTED_MODULE_1__["Provider"], {
+    store: store
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_giphys_search_container__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Root);
 
 /***/ }),
 
@@ -235,8 +255,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   window.fetchSearchGiphys = _actions_giphy_actions__WEBPACK_IMPORTED_MODULE_4__["fetchSearchGiphys"];
   window.receiveSearchGiphys = _actions_giphy_actions__WEBPACK_IMPORTED_MODULE_4__["receiveSearchGiphys"];
-  window.store = store;
-  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "React is working ;)"), root);
+  window.store = store; // ReactDOM.render(<div>React is working ;)</div>, root);
+
+  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_root__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    store: store
+  }), root);
 });
 
 /***/ }),
