@@ -69,7 +69,7 @@ After submitting the form, you will get to the `dashboard`, and under the <kbd>Y
 
 Okay, now it is time to write a function <kbd>fetchSearchGiphys</kbd> in `api_util.js` to make an AJAX call to the Giphy API. It will have a single argument, the <kbd>searchTerm</kbd> entered by a user. Look at the [Giphy API docs](https://github.com/Giphy/GiphyAPI) for more details, but in short, we want to make a <GET> request to <kbd>http://api.giphy.com/v1/gifs/search?q=${search + term}&api_key=${YOUR_GIPHY_API_KEY}&limit=2</kbd>.
   * Search term is replaced with our `'actual query'`
-  * actual [documentation](https://developers.giphy.com/docs/api/endpoint#search) does **not** include `http://`, so MAKE SURE TO INCLUDE IT and the actual API request does **NOT** have <kbd>${}</kbd> in it! So, take out ${} and just put your inputs instead. 
+  * actual [documentation](https://developers.giphy.com/docs/api/endpoint#search) does **not** include `http://`, so MAKE SURE TO INCLUDE IT and the actual API request does **NOT** have <kbd>${}</kbd> in it! So, take out ${} (intropolate the searchTerm though) and just put your inputs instead. 
   * the api request must be a **string**
 
 &nbsp;
@@ -83,7 +83,7 @@ Make sure to run your webpack scirpt, <kbd>webpack -w</kbd>. Check to make sure 
 Now, open the <kbd>index.html</kbd> file in the browser. The jQuery <kbd>script</kbd> tag has already been added, so <kbd>$.ajax</kbd> will be defined. Import <kbd>fetchSearchGiphys</kbd> to the entry file, then go ahead and put it on the window so we have access to it in the console. Then run the following code:
 
 Code:
-![alt text](./Assets/Screen&#32;Shot&#32;2020-02-03&#32;at&#32;9.jpg "API Code Example")
+![alt text](./Assets/Screen&#32;Shot&#32;2020-02-07&#32;at&#32;30.jpg "API Code Example")
 
 Code:
 ![alt text](./Assets/Screen&#32;Shot&#32;2020-02-03&#32;at&#32;4.jpg "FetchSearchGiphys Test Example")
@@ -253,3 +253,25 @@ In `components/giphys_search_container.js`, let us create the container componen
   * <kbd>connect</kbd> the <kbd>GiphysSearch</kbd> component and export 
 
 ![alt text](./Assets/Screen&#32;Shot&#32;2020-02-05&#32;at&#32;26.jpg "GiphysSearchContainer Connect(msp, mdp)(prezComponent) Example")
+
+&nbsp;
+
+**Giphys Search Presentation**
+
+We are almost done. But, we are far from done. There is a **LOT** we still have to do. Let us wrtie the presentational component for search. It needs to have an <kbd>input</kbd> bar and handle that user search iteraction.
+  * In the components constructor, set <kbd>this.state</kbd> to hold a search term.
+  * Render a search form with an <kbd>input field</kbd> and <kbd>submit button</kbd>.
+  * Create a <kbd>handleChange</kbd> function that updates the search term state when a user types in the input field.
+  * Create a <kbd>handleSubmit</kbd> function that fetches giphys when the submit button is clicked. 
+
+Code:
+![alt text](./Assets/Screen&#32;Shot&#32;2020-02-07&#32;at&#32;27.jpg "GiphysSearch Presentational Component Example")
+
+&nbsp;
+
+Next let us now create the <kbd>GiphysIndex</kbd> and <kbd>GiphysIndexItem</kbd> in order to render the results from your <kbd>GiphysSearch</kbd>. The world is your oyster!
+
+Code:
+![alt text](./Assets/Screen&#32;Shot&#32;2020-02-07&#32;at&#32;28.jpg "GiphysIndex Presentational Component Example")
+
+![alt text](./Assets/Screen&#32;Shot&#32;2020-02-07&#32;at&#32;29.jpg "GiphysIndexItem Presentational Component")

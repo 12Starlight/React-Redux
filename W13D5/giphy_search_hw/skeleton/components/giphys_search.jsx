@@ -1,7 +1,9 @@
+// Import React Redux
 import React from 'react';
 
+// Import Components
 import GiphysIndex from './giphys_index';
-import { render } from 'react-dom';
+
 
 
 class GiphysSearch extends React.Component {
@@ -55,6 +57,9 @@ class GiphysSearch extends React.Component {
 
 
 export default GiphysSearch;
+
+
+
 
 
 
