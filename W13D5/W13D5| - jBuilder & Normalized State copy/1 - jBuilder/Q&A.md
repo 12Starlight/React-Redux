@@ -2,7 +2,7 @@
 
 
 1. What do our jbuilder files return?
->Answer: They return a <kbd>JSON</kbd> object that is oftened in a `Normalized State`.
+>Answer: They return a <kbd>JSON</kbd> object that is often designed in a `Normalized State`.
 
 &nbsp;
 
