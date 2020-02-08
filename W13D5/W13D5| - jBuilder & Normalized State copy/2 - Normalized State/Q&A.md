@@ -9,7 +9,7 @@ Code Bleats:
 
 Code Users:
 ![alt text](Screen&#32;Shot&#32;2020-02-08&#32;at&#32;5.jpg "Action.type Users Example")
-
+ 
 &nbsp;
 
 1. What does 'normalized state' mean?
