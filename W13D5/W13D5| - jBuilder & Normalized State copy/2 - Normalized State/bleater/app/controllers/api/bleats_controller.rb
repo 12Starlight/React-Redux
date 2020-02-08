@@ -23,3 +23,9 @@ class Api::BleatsController < ApplicationController
   end
 
 end
+
+
+
+
+
+
