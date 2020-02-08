@@ -2,7 +2,7 @@
 
 
 1. Why can we use the same `action.type` in two different reducers?
->Answer: So, that the reducer handles the slice of state appropritate to that `action` which is the POJO object that our `Regular Action Creator` returns, and <kbd>type:</kbd> which is a property on that POJO. Our reducer recognizes that <kbd>type:</kbd> property which will have a different value each time, depending on what slice of state we want to manipulate, delete, or change. This <kbd>action.type</kbd>, represents our `listener` which our reducer will use in it's switch statement that then, will use the POJO <kbd>payload: value</kbd>. This represents a property on the data object returned from our AJAX request, based on how we formatted our JSON view page. This <kbd>key</kbd> (payload.key) is then used to update the `store state`.  
+>Answer: So, that the reducer handles the slice of state appropritate to that `action` which is the POJO object that our `Regular Action Creator` returns, and <kbd>type:</kbd> which is a property on that POJO. Our reducer recognizes that <kbd>type:</kbd> property which will have a different value each time, depending on what slice of state we want to manipulate, delete, or change. This <kbd>action.type</kbd>, represents our `listener` which our reducer for the appropriate slice of state, will use in it's switch statement that then, will use the POJO <kbd>payload: value</kbd>. This represents a property on the data object returned from our AJAX request, based on how we formatted our JSON view page. This <kbd>key</kbd> (payload.key) is then used to update the `store state`.  
 
 ![alt text](./Screen&#32;Shot&#32;2020-02-08&#32;at&#32;4.jpg "Action.type Example")
 
