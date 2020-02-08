@@ -17,7 +17,7 @@ Browser:
 
 &nbsp;
 
-Now remember that bc it is <kbd>N + 1</kbd> we want to change our `controller action` to use **includes** in order to **cache** our first query.
+Now remember that bc it is <kbd>N + 1</kbd>, we want to change our `controller action` to use **includes** in order to **cache** our first query.
 
 Code:
 ![alt text](./Screen&#32;Shot&#32;2020-02-08&#32;at&#32;3.jpg "Includes In Controller Example")
