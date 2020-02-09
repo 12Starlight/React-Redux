@@ -23,3 +23,19 @@ Get familiar with the files and folders.
   * Open up the rails console (<kbd>rails c</kbd>) to see what is in the database.
   * Start up the rails server (<kbd>rails s</kbd>) and visit the root url. 
 
+&nbsp;
+
+### **API Namespace**
+
+Let us build pokemon routes! These need to be nested under an <kbd>api</kbd> namespace.
+
+Code:
+![alt text](./app/assets/images/notes/Rails_API/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;1.jpg "Routes Example")
+
+&nbsp;
+
+The <kbd>defaults: { format: :json }</kbd> option tells the controller to first look for a <kbd>.json.jbuilder</kbd> view rather than an <kbd>html.erb</kbd> view.
+
+Make sure the <kbd>routes.rb</kbd> table should look like the following:
+
+![alt text](./app/assets/images/notes/Rails_API/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;2.jpg "Rails Routes Example")

@@ -6,3 +6,7 @@ Rails.application.routes.draw do
     resources :pokemon, only: [:create, :index, :show]
   end
 end
+
+
+
+
