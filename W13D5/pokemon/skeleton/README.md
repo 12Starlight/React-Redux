@@ -260,4 +260,4 @@ Create a new reducer, <kbd>entitiesReducer</kbd>, that will be in charge of comb
   * Import <kbd>combineReducers</kbd> from <kbd>redux</kbd> and our <kbd>pokemonReducer</kbd>.
   * Call <kbd>combineReducers</kbd> so that our <kbd>pokemonReducer</kbd> is responsible for the <kbd>pokemon</kbd> slice. Like so:
 
-![alt text](./app/assets/images/notes/Phase_2/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;9.jpg "Entities Reducer Example")
+![alt text](./app/assets/images/notes/Phase_2/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;10.jpg "Entities Reducer Example")
