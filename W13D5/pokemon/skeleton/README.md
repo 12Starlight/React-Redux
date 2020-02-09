@@ -157,3 +157,6 @@ Browser:
 &nbsp;
 
 ### **Frontend Structure**
+
+Now it is time to flesh out the other folders in our frontend directory. Go ahead and nest <kbd>actions</kbd>, <kbd>components</kbd>, <kbd>reducers</kbd>, <kbd>store</kbd>, <kbd>middleware</kbd>, and <kbd>util</kbd> within <kbd>frontend</kbd>.
+
