@@ -17,5 +17,16 @@
   },
   "scripts": {
     "webpack": "webpack --mode=development --watch"
-  }
+  },
+  "description": "&nbsp;",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "devDependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
