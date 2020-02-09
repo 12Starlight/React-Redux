@@ -215,6 +215,8 @@ Then, define a `Regular Action Creator` to be called on success of <kbd>ApiUtil#
 
 ![alt text](./app/assets/images/notes/Phase_2/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;4.jpg "Calling Util And Regular Action In Console Example")
 
+&nbsp;
+
 Code:
 ![alt text](./app/assets/images/notes/Phase_2/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;5.jpg "Putting Util And Regular Action On Window Example")
 
