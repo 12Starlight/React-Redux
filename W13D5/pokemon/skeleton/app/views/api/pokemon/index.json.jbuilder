@@ -4,3 +4,5 @@
     json.image_url asset_path("pokemon_snaps/#{pokem.image_url}") 
   end
 end 
+
+

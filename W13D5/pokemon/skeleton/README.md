@@ -39,3 +39,51 @@ The <kbd>defaults: { format: :json }</kbd> option tells the controller to first 
 Make sure the <kbd>routes.rb</kbd> table should look like the following:
 
 ![alt text](./app/assets/images/notes/Rails_API/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;2.jpg "Rails Routes Example")
+
+&nbsp;
+
+### **Pokemon Controller** 
+
+We want a controller to handle our pokemon <kbd>resources</kbd>, so it is time to build one.
+  * Generate an <kbd>Api::PokemonController</kbd>.
+    * Use the command <kbd>rails g controller Api::Pokemon</kbd> in order to generate the correct helper and view files.
+  * Define <kbd>#index</kbd> and <kbd>#show</kbd> controller actions.
+
+&nbsp;
+
+It is important that our actions **render json responses**. In order for everything to flow on the front end, let us go and format our <kbd>index</kbd> action to generate json responses that look something like this:
+
+![alt text](./app/assets/images/notes/Rails_API/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;3.jpg "JSON Response Example")
+
+&nbsp;
+
+Our `primary keys` of the pokemon, **are the keys in our json response**. The objects themselves are the values. This is a perfect place to use <kbd>Jbuilder</kbd>. 
+  * Create a `views/api/pokemon/index.json.jbuilder` file.
+  * Iterate over each pokemon.
+  * Use <kbd>json.set!</kbd> to explicitly set the key to the pokemon's id.
+  * Use <kbd>json.extract!</kbd> to grab the pokemon's <kbd>id</kbd>, <kbd>name</kbd>, <kbd>image_url</kbd>.
+
+&nbsp;
+
+Code:
+![alt text](./app/assets/images/notes/Rails_API/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;4.jpg "Pokemon Index JSON Example")
+
+&nbsp;
+
+We want to use the <kbd>asset_path</kbd> helper to find the path that is correct for the image. Locations of assets are sometimes diffreent for production, so to make sure, use <kbd>asset_path</kbd> rather than a literal path. For more information check [these guides](https://guides.rubyonrails.org/asset_pipeline.html) out!
+
+We have all the information we need for our index route. Keep in mind, Jbuilder allows us to `select and organize` or *curate* our data, gettting back only the attributes we want.
+  * Now that we have the basics, let us create a Jbuilder view for <kbd>PokemonController#show</kbd>. We want the action to render all the pokemon info for just that pokemon, including all it's items. For this particular case, list the poke and items separately bc they represent separate resources. On Day 2 when we `normalize` our data, it will make more sense. 
+
+&nbsp;
+
+Remember, we want to use `json.association` to use our associtions and <kbd>@instance.association.each do |item|</kbd> in order to iterate over the associations. Everything else is just pretty much the same as our `index.json.jbuilder` file.
+
+Code:
+![alt text](./app/assets/images/notes/Rails_API/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;5.jpg "Pokemon Show JSON Example")
+
+&nbsp;
+
+A `GET` request to <kbd>localhost:3000/api/pokemon/5</kbd> should render for you:
+
+![alt text](./app/assets/images/notes/Rails_API/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;6.jpg "JSON Object For Pokemon Example")

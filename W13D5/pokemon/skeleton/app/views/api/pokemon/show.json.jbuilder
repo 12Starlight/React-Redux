@@ -12,3 +12,9 @@ json.items do # put json.association to use an association
     end
   end
 end 
+
+
+
+ 
+
+
