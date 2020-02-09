@@ -70,7 +70,7 @@ Code:
 
 &nbsp;
 
-We want to use the <kbd>asset_path</kbd> helper to find the path that is correct for the image. Locations of assets are sometimes diffreent for production, so to make sure, use <kbd>asset_path</kbd> rather than a literal path. For more information check [these guides](https://guides.rubyonrails.org/asset_pipeline.html) out!
+We want to use the <kbd>asset_path</kbd> helper to find the path that is correct for the image. Locations of assets are sometimes different for production, so to make sure, use <kbd>asset_path</kbd> rather than a literal path. For more information check [these guides](https://guides.rubyonrails.org/asset_pipeline.html) out!
 
 We have all the information we need for our index route. Keep in mind, Jbuilder allows us to `select and organize` or *curate* our data, gettting back only the attributes we want.
   * Now that we have the basics, let us create a Jbuilder view for <kbd>PokemonController#show</kbd>. We want the action to render all the pokemon info for just that pokemon, including all it's items. For this particular case, list the poke and items separately bc they represent separate resources. On Day 2 when we `normalize` our data, it will make more sense. 
