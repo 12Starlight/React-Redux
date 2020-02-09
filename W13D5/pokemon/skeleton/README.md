@@ -36,7 +36,7 @@ Code:
 
 The <kbd>defaults: { format: :json }</kbd> option tells the controller to first look for a <kbd>.json.jbuilder</kbd> view rather than an <kbd>html.erb</kbd> view.
 
-Make sure the <kbd>routes.rb</kbd> table should look like the following:
+Make sure the <kbd>routes.rb</kbd> table looks like the following:
 
 ![alt text](./app/assets/images/notes/Rails_API/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;2.jpg "Rails Routes Example")
 
