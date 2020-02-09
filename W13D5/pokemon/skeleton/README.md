@@ -151,7 +151,6 @@ This is what our entry file might look like:
 Browser:
 ![alt text](./app/assets/images/notes/Phase_1/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;4.jpg "Pokedex Entry Browswer Example")
 
-&nbsp;
 
 **Test our frontend setup**: Make sure our component is rendering the message we put in our h1.
 
