@@ -261,3 +261,15 @@ Create a new reducer, <kbd>entitiesReducer</kbd>, that will be in charge of comb
   * Call <kbd>combineReducers</kbd> so that our <kbd>pokemonReducer</kbd> is responsible for the <kbd>pokemon</kbd> slice. Like so:
 
 ![alt text](./app/assets/images/notes/Phase_2/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;10.jpg "Entities Reducer Example")
+
+&nbsp;
+
+### **The rootReducer**
+
+In order to use our <kbd>entities</kbd> reducer that we just created, we need a <kbd>rootReducer</kbd>. Again we will use <kbd>combineReducers</kbd> and create a key similarly to what we did **inside** the entities reducer. This is how we will generate our overall `application state` and how we will assign each <kbd>slice</kbd> of the state to a different reducer. Overall all this will make our app scalable, thus allowing us to grow our application state with ease.
+  * Create a new file: `/frontend/reducers/root_reducer.js`.
+  * Import <kbd>combineReducers</kbd> from <kbd>redux</kbd> and our <kbd>entitiesReducer</kbd>.
+  * Call <kbd>combineReducers</kbd> so that our <kbd>entitiesReducer</kbd> is responsible for the <kbd>entities</kbd> slice of the application state. Like the following:
+
+![alt text](./app/assets/images/notes/Phase_2/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;11.jpg "RootReducer Example")
+
