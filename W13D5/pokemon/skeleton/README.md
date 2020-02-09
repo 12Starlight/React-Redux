@@ -174,6 +174,8 @@ It will have separate `sub-slices` for each of our resources (just <kbd>pokemon<
 
 **Hint:** To nest reducers inside of other reducers, use <kbd>combineReducers</kbd> inside of the <kbd>entities</kbd> reducer.
 
+&nbsp;
+
 Sample State Shape:
 ![alt text](./app/assets/images/notes/Phase_2/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;1.jpg "Sample Entities State Example")
 
