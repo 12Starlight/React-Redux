@@ -273,3 +273,20 @@ In order to use our <kbd>entities</kbd> reducer that we just created, we need a 
 
 ![alt text](./app/assets/images/notes/Phase_2/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;11.jpg "RootReducer Example")
 
+&nbsp;
+
+### **Store**
+
+We have come far, now it is time to test our app's reducer using a `Redux` store to dispatch from. Let us create our application store now.
+  * Create a `store.js` file within the `frontend/store` folder.
+  * Import <kbd>createStore</kbd> and <kbd>applyMiddleware</kbd> from the <kbd>redux</kbd> package.
+  * Import our <kbd>rootReducer</kbd>.
+  * Import <kbd>logger</kbd> the default export of <kbd>redux-logger</kbd> middleware. 
+
+&nbsp;
+
+Redux has a <kbd>createStore</kbd> function that has the following parameters: <kbd>reducer</kbd> `(rootReducer)`, an optional <kbd>preloadedState</kbd>, and any <kbd>enhancers</kbd> like `middleware`.
+  * For now, call <kbd>createStore</kbd> and pass it our imported <kbd>rootReducer</kbd>, then <kbd>logger</kbd> as our only `middleware`. Keep in mind, middlewares have to be wrapped in a call to <kbd>applyMiddleware</kbd> when they are passed to <kbd>createStore</kbd>. This will be explained in more detail later.
+  * Wrap the creation of the store in a <kbd>configureStore</kbd> function.
+
+![alt text](./app/assets/images/notes/Phase_2/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;12.jpg "ConfigureStore Example")
