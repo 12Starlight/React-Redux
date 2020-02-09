@@ -223,3 +223,22 @@ Code:
 
 Browser:
 ![alt text](./app/assets/images/notes/Phase_2/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;6.jpg "Result Of Util And Regular Action In Console Being Called Example")
+
+&nbsp;
+
+### **pokemonReducer**
+
+Now it is time to make our <kbd>pokemonReducer</kbd>. Let us recap, that the `reducer` is centrally focused on thwo the state changes as a result of <kbd>dispatched</kbd> actions. Each reducer takes two parameters: the previous <kbd>state</kbd> and the <kbd>action</kbd> dispatched. It will always return a new object/array state or the old **existing** state. It will NEVER mutate the previous state. When the reducer does not care about a dispatched action, it just returns the `old previous state`.
+  * Create a `frontend/reducers/pokemon_reducer.js` file.
+  * Import our <kbd>RECEIVE_ALL_POKEMON</kbd> constant.
+
+![alt text](./app/assets/images/notes/Phase_2/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;7.jpg "Import Constant Example")
+
+  * Define and <kbd>export default</kbd> a <kbd>pokemonReducer</kbd> that has a default state of an empty object.
+  * Add a <kbd>switch(action.type)</kbd> statement.
+  * Create <kbd>RECEIVE_ALL_POKEMON</kbd> and default cases. Remember not to mutate <kbd>state</kbd>!
+
+&nbsp;
+
+Code:
+![alt text](./app/assets/images/notes/Phase_2/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;8.jpg "Pokemon Reducer Example")
