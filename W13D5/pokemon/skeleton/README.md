@@ -168,7 +168,7 @@ Now it is time to flesh out the other folders in our frontend directory. Go ahea
 
 ### **Designing the State Shape**
 
-So, like we did with `giphy_search` homework, let us now talk once again about the shape of our application state. **This is the MOST important step** Do not ever think about skipping it. To get going, we want to just render all of our pokemon. In order to prepare for our fullstack projects, we will be normalizing our state. Right now though, we do not have much, so having an <kbd>entities</kbd> slice of state is a good place to start.
+So, like we did with `giphy_search` homework, let us now talk once again about the shape of our application state. **This is the MOST important step**. Do not ever think about skipping it. To get going, we want to just render all of our pokemon. In order to prepare for our fullstack projects, we will be normalizing our state. Right now though, we do not have much, so having an <kbd>entities</kbd> slice of state is a good place to start.
 
 It will have separate `sub-slices` for each of our resources (just <kbd>pokemon</kbd> for now). This will hold *all* the pokemon, for both the index item and detail views. 
 
