@@ -112,3 +112,49 @@ As you have done many times before, set up a <kbd>package.json</kbd> and a <kbd>
     * <kbd>@babel/preset-react</kbd>
     * <kbd>babel-loader</kbd>
   * Add a <kbd>"webpack"</kbd> script to our <kbd>package.json</kbd> that runs <kbd>webpack --mode=development --watch</kbd>
+
+&nbsp;
+
+### **Webpack**
+
+Next we need to configure Webpack to compile our <kbd>bundle.js</kbd> file.
+  * Create a new file called <kbd>webpack.config.js</kbd> in the root of your project.
+  * Copy and paste the following configuration:
+
+![alt text](./app/assets/images/notes/Phase_1/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;1.jpg "Webpack Example")
+
+&nbsp;
+
+### Aside 🔥 How does Rails get <kbd>bundle.js</kbd>?
+
+Take a look in `app/assets/application.js`. You will see a few <kbd>require</kbd> statements, known as <kbd>sprockets</kbd>.
+
+![alt text](./app/assets/images/notes/Phase_1/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;2.jpg "Sprockets Example")
+
+It may appear that these lines are commented out. However, they are actually integrating the content of these files/libraries into our <kbd>application.js</kbd> file. They are integrated in the order in which they appear. In the case above, we are requiring <kbd>jquery</kbd>, then <kbd>jquery_ujs</kbd> (adds our `CSRF token` to each <kbd>$.ajax</kbd> call with <kbd>jquery</kbd> added as a dependency) libraries before including our own local files. 
+
+<kbd>require_tree .</kbd> includes all the files in the same directory (hence the <kbd>.</kbd> of relativity), which will include our <kbd>bundle.js</kbd> file once it has been webpacked. If including local files in a certain order is required for your app, you will need to <kbd>require</kbd> them individually as <kbd>require_tree</kbd> does not guarantee the ordering. 
+
+Notice that in <kbd>webpack.config.js</kbd> the <kbd>entry</kbd> key is expected to point to `./frontend/pokedex.jsx`.
+  * Create a <kbd>frontend</kbd> directory in the root folder of your project.
+  * Add an entry file called <kbd>pokedex.jsx</kbd>.
+  * <kbd>import</kbd> both the <kbd>react</kbd> and <kbd>react-dom</kbd> packages.
+  * Add an event listener for <kbd>DOMContentLoaded</kbd>.
+  * In the callback to this listener, try rendering a simple stateless React component to test everything we have written so far.
+  * Remember to run <kbd>npm run webpack</kbd> go generate our <kbd>bundle.js</kbd>.
+
+&nbsp;
+
+This is what our entry file might look like:
+![alt text](./app/assets/images/notes/Phase_1/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;3.jpg "Pokedex Entry Example")
+
+Browser:
+![alt text](./app/assets/images/notes/Phase_1/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;4.jpg "Pokedex Entry Browswer Example")
+
+&nbsp;
+
+**Test our frontend setup**: Make sure our component is rendering the message we put in our h1.
+
+&nbsp;
+
+### **Frontend Structure**
