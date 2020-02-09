@@ -181,4 +181,42 @@ Sample State Shape:
 
 An object is recommended, to store collections of objects in an app's state. It might create a few more obstacles when it comes to iterating over the collection we want to render. Still the same, an object will be way more advantagous for `updating` or `deleting` individual pokemon in our collection. (time complexity between array methods and objects). Also, keep in mind that the current state looks very similar to the json response we already created for the <kbd>PokemonController#index</kbd> action. 
 
+&nbsp;
 
+### **API Util and Action Creators**
+
+Let us render all of our pokemon. To do this, let us set up a way to fetch them from the back end.
+  * Create an `api_util.js` file inside our `frontend/util` folder.
+    * Inside this file, we will define functions that make ajax requests fetching information from our rails api. 
+
+  * Export a function called <kbd>fetchAllPokemon</kbd> that returns a promise.
+    * The function should make an AJAX request that will make a http request to our <kbd>PokemonController#index</kbd> endpoint. 
+    * Run <kbd>rails routes</kbd> to determine the appropriate url for this request. 
+
+Code:
+![alt text](./app/assets/images/notes/Phase_2/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;2.jpg "ApiUtil fetchAllPokemon Example")
+
+&nbsp;
+
+Then, define a `Regular Action Creator` to be called on success of <kbd>ApiUtil#fetchAllPokemon</kbd>.
+  * Create a `pokemon_actions.js` file within our `frontend/actions` folder.
+  * Export a constant called <kbd>RECEIVE_ALL_POKEMON</kbd> with the value <kbd>"RECEIVE_ALL_POKEMON"</kbd>.
+  * Export a function called <kbd>receiveAllPokemon(pokemon)</kbd> that returns an action object `POJO`. 
+    * This action object should have two keys: <kbd>type</kbd> of <kbd>RECEIVE_ALL_POKEMON</kbd> and another for the received <kbd>pokemon</kbd> data. 
+
+![alt text](./app/assets/images/notes/Phase_2/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;3.jpg "Constant And Regular Action Creator Example")
+
+&nbsp;
+
+**Make sure the pokemon action creator and api util work in the browse before going to the next section!**
+  * Import the <kdb>action</kdb> and <kbd>api_util</kbd> functions into your entry file.
+  * Assign them to the <kbd>window</kbd> to test that in the browser's console.
+  * You should be able to run:
+
+![alt text](./app/assets/images/notes/Phase_2/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;4.jpg "Calling Util And Regular Action In Console Example")
+
+Code:
+![alt text](./app/assets/images/notes/Phase_2/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;5.jpg "Putting Util And Regular Action On Window Example")
+
+Browser:
+![alt text](./app/assets/images/notes/Phase_2/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;6.jpg "Result Of Util And Regular Action In Console Being Called Example")
