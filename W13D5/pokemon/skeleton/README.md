@@ -160,3 +160,25 @@ Browser:
 
 Now it is time to flesh out the other folders in our frontend directory. Go ahead and nest <kbd>actions</kbd>, <kbd>components</kbd>, <kbd>reducers</kbd>, <kbd>store</kbd>, <kbd>middleware</kbd>, and <kbd>util</kbd> within <kbd>frontend</kbd>.
 
+&nbsp;
+
+# **Phase 2: <kbd>Pokemon</kbd> Redux Cycle**
+
+&nbsp;
+
+### **Designing the State Shape**
+
+So, like we did with `giphy_search` homework, let us now talk once again about the shape of our application state. **This is the MOST important step** Do not ever think about skipping it. To get going, we want to just render all of our pokemon. In order to prepare for our fullstack projects, we will be normalizing our state. Right now though, we do not have much, so having an <kbd>entities</kbd> slice of state is a good place to start.
+
+It will have separate `sub-slices` for each of our resources (just <kbd>pokemon</kbd> for now). This will hold *all* the pokemon, for both the index item and detail views. 
+
+**Hint:** To nest reducers inside of other reducers, use <kbd>combineReducers</kbd> inside of the <kbd>entities</kbd> reducer.
+
+Sample State Shape:
+![alt text](./app/assets/images/notes/Phase_2/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;1.jpg "Sample Entities State Example")
+
+&nbsp;
+
+An object is recommended, to store collections of objects in an app's state. It might create a few more obstacles when it comes to iterating over the collection we want to render. Still the same, an object will be way more advantagous for `updating` or `deleting` individual pokemon in our collection. (time complexity between array methods and objects). Also, keep in mind that the current state looks very similar to the json response we already created for the <kbd>PokemonController#index</kbd> action. 
+
+
