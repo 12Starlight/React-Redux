@@ -242,3 +242,22 @@ Now it is time to make our <kbd>pokemonReducer</kbd>. Let us recap, that the `re
 
 Code:
 ![alt text](./app/assets/images/notes/Phase_2/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;8.jpg "Pokemon Reducer Example")
+
+&nbsp;
+
+### **entitiesReducer**
+
+We want to separate our app's data and presentational states. To do this we can create nested reducers, such that eventually our redux state might look something like this: 
+
+Note how we are using <kbd>entitites.pokemon</kbd> in order to manage *all* of the pokemon. At this point we have loaded the index, loaded the detail of Ivysaur, which is why we see Ivysaur's attack, defense, item_ids, etc., and we have also loaded Ivysaur's items in the <kbd>items</kbd> slice too. 
+
+![alt text](./app/assets/images/notes/Phase_2/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;9.jpg "Entities Slice Of State Example")
+
+&nbsp;
+
+Create a new reducer, <kbd>entitiesReducer</kbd>, that will be in charge of combining each of our entity sub-reducers(<kbd>pokemonReducer</kbd> and later <kbd>itemsReducer</kbd>).
+  * Create a new file: `/frontend/reducers/entities_reducer.js`
+  * Import <kbd>combineReducers</kbd> from <kbd>redux</kbd> and our <kbd>pokemonReducer</kbd>.
+  * Call <kbd>combineReducers</kbd> so that our <kbd>pokemonReducer</kbd> is responsible for the <kbd>pokemon</kbd> slice. Like so:
+
+![alt text](./app/assets/images/notes/Phase_2/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;9.jpg "Entities Reducer Example")
