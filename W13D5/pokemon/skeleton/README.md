@@ -87,3 +87,28 @@ Code:
 A `GET` request to <kbd>localhost:3000/api/pokemon/5</kbd> should render for you:
 
 ![alt text](./app/assets/images/notes/Rails_API/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;6.jpg "JSON Object For Pokemon Example")
+
+&nbsp;
+
+# **Phase 1: Frontend Setup**
+
+&nbsp;
+
+### **Node Package Manager**
+
+As you have done many times before, set up a <kbd>package.json</kbd> and a <kbd>webpack.config.js</kbd> file to configure our <kbd>Pokedex</kbd> app to use <kbd>NPM</kbd> and <kbd>Webpack</kbd>.
+  * Run <kbd>npm init -y</kbd> to initialize our app's <kbd>package.json</kbd> with the default boilerplate settings.
+  * <kbd>npm install --save</kbd> the following packages:
+    * <kbd>webpack</kbd>
+    * <kbd>webpack-cli</kbd>
+    * <kbd>react</kbd>
+    * <kbd>react-dom</kbd>
+    * <kbd>react-router-dom</kbd>
+    * <kbd>redux</kbd>
+    * <kbd>react-redux</kbd>
+    * <kbd>redux-logger</kbd>
+    * <kbd>@babel/core</kbd>
+    * <kbd>@babel/preset-env</kbd>
+    * <kbd>@babel/preset-react</kbd>
+    * <kbd>babel-loader</kbd>
+  * Add a <kbd>"webpack"</kbd> script to our <kbd>package.json</kbd> that runs <kbd>webpack --mode=development --watch</kbd>
