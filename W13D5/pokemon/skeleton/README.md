@@ -441,3 +441,36 @@ Code:
 &nbsp;
 
 **PokemonIndex**
+
+Okay, time to build the last <kbd>component</kbd> for Part 1 😂 Let us write the <kbd>PokemonIndex</kbd> presentational component, which we want to render an `unordered list` of pokemon <kbd>names</kbd> next to corresponding <kbd>images</kbd>. 
+  * Create a `frontend/components/pokemon/pokemon_index.jsx` file.
+  * Define and export a *class*, component that renders a <kbd>< li ></kbd> for each pokemon object in the <kbd>this.props.pokemon</kbd> array.
+    * Display the pokemon's <kbd>name</kbd> and a *small* <kbd>image</kbd>.
+
+  * Inside of <kbd>componentDidMount</kbd>, call <kbd>this.props.requestAllPokemon</kbd>.
+  * Import the **container component** to <kbd>root.jsx</kbd>.
+  * Nest and render a <kbd>< PokemonIndexContainer /></kbd> witin your <kbd>< Root /></kbd> component. 
+
+&nbsp;
+
+**Refresh our browswer and make sure <kbd>PokemonIndex</kbd> are rendering:** Our app, should display an empty <kbd>ul</kbd> reflecting our app's initial state, (add 'sleep(3)' on the top line of the index action for the Api::PokemonController) after the request to <kbd>requestAllPokemon</kbd> succeeds the ul will be populated with our Pokemon. Keep in mind, <kbd>webpack</kbd> is where we will find errors for debugging purposes!
+
+Each time you refresh the page, all of our `pokemon objects` should be displayed in a list format, each being displayed in its own li. Make sure to comment out all the code on the window used for testing purposes in our entry file. **Demonstrate our compentence by showing a TA our work, making sure that  our pokemon React components render before going onto Part 2!**
+
+Before sailing off into the next section, complete the following steps:
+  * Return to and complete the [Jbuilder Bonus](https://open.appacademy.io/learn/swe-online/react/jbuilder)
+  * Complete the React Router readings
+
+Code:
+![alt text](./app/assets/images/notes/Phase_3/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;8.jpg "PokemonIndex Example")
+
+![alt text](./app/assets/images/notes/Phase_3/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;9.jpg "PokemonIndexContainer Being Called In Root Example")
+
+![alt text](./app/assets/images/notes/Phase_3/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;10.jpg "Api::PokemonController#index Sleep(3) Example")
+
+Browser:
+![alt text](./app/assets/images/notes/Phase_3/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;11.jpg "PokemonIndexContainer Rendered In Browser Example")
+
+&nbsp;
+
+Congratulations 😂 You are one step closer to BALLER status 🔥😎	 

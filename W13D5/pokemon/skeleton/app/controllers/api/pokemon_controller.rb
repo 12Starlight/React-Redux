@@ -1,5 +1,6 @@
 class Api::PokemonController < ApplicationController
   def index
+    sleep(3)
     @pokemon = Pokemon.all 
     render :index 
   end
@@ -9,3 +10,5 @@ class Api::PokemonController < ApplicationController
     render :show 
   end 
 end
+
+
