@@ -290,3 +290,27 @@ Redux has a <kbd>createStore</kbd> function that has the following parameters: <
   * Wrap the creation of the store in a <kbd>configureStore</kbd> function.
 
 ![alt text](./app/assets/images/notes/Phase_2/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;12.jpg "ConfigureStore Example")
+
+&nbsp;
+
+### **Aside: 🔥 <kbd>configureStore</kbd> Pattern**
+
+This is the pattern we want to practice! Instead of just exporting the store, we want to export a `function` that creates and returns a <kbd>store</kbd>. This can be used in the future to swap out reducers, <kbd>preloadedState</kbd>, or enhancers depending of different conditions (e.g. development vs productive environments).
+  * In your <kbd>pokedex.jsx</kbd> entry file, import your <kbd>configureStore</kbd> function.
+  * Inside the <kbd>DOMContentLoaded</kbd> callback, declare a <kbd>store</kbd>.
+  * Call <kbd>configureStore</kbd> and assign its return value to <kbd>store</kbd>. 
+  * For **testing purposes only**, make <kbd>getState</kbd> and <kbd>dispatch</kbd> available on the <kbd>window</kbd> (i.e. <kbd>window.getState = store.getState;</kbd> and <kbd>window.dispatch = store.dispatch</kbd>).
+    * We want to avoid placing our entire <kbd>store</kbd> on the window as it can create scoping issues and create some bad bugs. 
+
+**Test your store and reducer**. We want to be able to run the following code snippet in the browser's console:
+
+![alt text](./app/assets/images/notes/Phase_2/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;13.jpg "Code To Test Store And Reducer Example")
+
+&nbsp;
+
+Code:
+![alt text](./app/assets/images/notes/Phase_2/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;15.jpg "Puting Store On Window Example")
+
+Browswer:
+![alt text](./app/assets/images/notes/Phase_2/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;14.jpg "Result Of Testing Store And Reducer In Console Example")
+

@@ -3,7 +3,7 @@ import { RECEIVE_ALL_POKEMON } from '../actions/pokemon_actions';
 
 
 // Build Pokemon Reducer
-const pokemonReducer = (oldState = {}, action) {
+const pokemonReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
 
   switch(action.type) {
