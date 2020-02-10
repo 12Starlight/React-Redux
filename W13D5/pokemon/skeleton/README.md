@@ -372,7 +372,7 @@ Browser
 # **Phase 3: <kbd>Pokemon</kbd> React Components**
 
 **The <kbd>Root</kbd> Component**
-  * Create a <kbd>Root</kbd> component. This is where we will render **ALL** of the application's `React` <kbd>components</kbd>.
+  * Create a <kbd>Root</kbd> component. This is where, we will render **ALL** of the application's `React` <kbd>components</kbd>.
     * <kbd>Root</kbd> should be a *stateless* component (i.e. a *functional component*).
     * It will be passed the app's Redux <kbd>store</kbd> as a prop.
     * It should wrap all of our components with the <kbd>Provider</kbd> from <kbd>react-redux</kbd>.
