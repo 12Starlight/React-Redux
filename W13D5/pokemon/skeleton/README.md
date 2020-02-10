@@ -348,3 +348,21 @@ Browswer:
 
 ### **Selectors**
 
+We are going to add the final `capstone` to our Redux structure: **selectors**. These are functions that allow us to 'select' complex pieces of state. We define them in a `selectors.js` file, in our app's `frontend/reducers` folder. 
+  * Create a `frontend/reducers/selectors.js` file. 
+  * Define and export a function, <kbd>selectAllPokemon(state)</kbd>, which accepts the application state as an argument and exports an array of all the pokemon objects. Hint: We can use the <kbd>Object.values</kbd> method. 
+  * Look at the state using <kbd>getState()</kbd>, to determine what you want to access. Break it down looking at the keys 😉
+
+&nbsp;
+
+**Test our selector in the browswer**. We should be able to run the following code:
+
+![alt text](./app/assets/images/notes/Phase_2/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;21.jpg "Code To Test Selectors In Console Example")
+
+&nbsp;
+
+Code:
+![alt text](./app/assets/images/notes/Phase_2/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;22.jpg "Selector Example")
+
+Browser
+![alt text](./app/assets/images/notes/Phase_2/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;23.jpg "Testing Selector In Console Example")
