@@ -49,3 +49,38 @@ Suppose we want to use the <kbd>Users</kbd> component to either render the <kbd>
 
 Notice that we do not need to use <kbd>HashRouter</kbd> again ~ as long as it wraps our <kbd>Root</kbd> file all of our <kbd>Route</kbd> components will be able to connect to it. 
 
+&nbsp;
+
+# **Location Props**
+
+We need the <kbd>id</kbd> from the `URL`, in order to fetch the correct user for our database. As <kbd>props</kbd>, `React Router` passes that information to the profile component. The <kbd>props</kbd> it makes available are as follows:
+  * <kbd>location</kbd> This is an object that makes the current URL available to us. It's most important key is <kbd>pathname</kbd>, which returns the current URL.
+  * <kbd>match</kbd> This is an object that contains important information about how the current URL matches the route path. Here are some of the more useful keys on the <kbd>match</kbd> object.
+    * <kbd>isExact</kbd> a boolean that tells you whether or not the URL exactly matches the path.
+    * <kbd>url</kbd> the current URL.
+    * <kbd>path</kbd> the route path it matched against (without *wildcards* filled in).
+    * <kbd>params</kbd> the matches for the individual wildcard segments, nested under their names. 
+
+  * <kbd>history</kbd> This prop lets you update the URL programatically. For example, suppose we want to push a new URL when the user clicks a button. It has two useful methods:
+    * <kbd>push</kbd> this adds a new URL to the end of the history stack. That means that clicking the back button will take the browser to the previous URL. Note that pushing the same URL multiple times in a row will have no effect; the URL will still only show up on the stack **once**. In development mode, pushing the same URL twice in a row will generate a console warning. This warning is disabled in production mode. 
+    * <kbd>replace</kbd> This replaces the current URL on the history stack, so the back button will not take you to it. For example:
+
+![alt text](./Images/Screen&#32;Shot&#32;2020-02-10&#32;at&#32;4.jpg "Router Push And Replace Example")
+
+&nbsp;
+
+Let us use the <kbd>match</kbd> prop to fetch the correct user from the database in the <kbd>Profile</kbd> presentational component. Keep in mind, that our <kbd>Profile</kbd> presentational component was rendered at the path `users/:userId`. Thus we would have a <kbd>userId</kbd> param available. 
+
+![alt text](./Images/Screen&#32;Shot&#32;2020-02-10&#32;at&#32;5.jpg "Match And Wildcard Example")
+
+&nbsp;
+
+# **Resources**
+  * [React Router docs](https://reacttraining.com/react-router/web/guides/quick-start)
+  * [Route](https://reacttraining.com/react-router/web/api/Route)
+  * [HashRouter](https://reacttraining.com/react-router/web/api/HashRouter)
+  * [location](https://reacttraining.com/react-router/web/api/location)
+  * [match](https://reacttraining.com/react-router/web/api/match)
+  * [history](https://reacttraining.com/react-router/web/api/history)
+
+

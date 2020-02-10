@@ -32,3 +32,25 @@ const Users = () => (
   // otherwise render the profile page for that user
   <Route path="/users/:userId" component={Profile} />
 ); 
+
+
+// Router Push And Replace Example
+const handleClick = () => this.props.history.push('/some/url');
+
+const redirect = () => this.props.history.replace('/some/other/url');
+
+
+// Router Match And Wildcard Example
+class Profile extends React.Component {
+  componentDidMount() {
+    const id = this.props.match.params.userId; 
+    fetchUser(id);
+  }
+
+
+  render() {
+    return(
+      <div>We are awesome!</div>
+    )
+  }
+}
