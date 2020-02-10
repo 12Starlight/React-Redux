@@ -366,3 +366,36 @@ Code:
 
 Browser
 ![alt text](./app/assets/images/notes/Phase_2/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;23.jpg "Testing Selector In Console Example")
+
+&nbsp;
+
+# **Phase 3: <kbd>Pokemon</kbd> React Components**
+
+**The <kbd>Root</kbd> Component**
+  * Create a <kbd>Root</kbd> component. This is where we will render **ALL** of the application's `React` <kbd>components</kbd>.
+    * <kbd>Root</kbd> should be a *stateless* component (i.e. a *functional component*).
+    * It will be passed the app's Redux <kbd>store</kbd> as a prop.
+    * It should wrap all of our components with the <kbd>Provider</kbd> from <kbd>react-redux</kbd>.
+
+Code:
+![alt text](./app/assets/images/notes/Phase_3/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;1.jpg "Root Example")
+
+&nbsp;
+
+**Anywhere** we use <kbd>JSX</kbd>, we **must** import <kbd>React</kbd>.
+  * Update your doc-ready callback in the `entry` file `pokedex.jsx`.
+    * Import your newly defined <kbd>Root</kbd> component.
+    * Render it, by passing it in as the <kbd>store</kbd> prop. 
+
+Code:
+![alt text](./app/assets/images/notes/Phase_3/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;2.jpg "Calling Root Component In Docoment-Ready Example")
+
+**Make sure everything works and <kbd>Root</kbd> gets rendered, before heading onto the next part.**
+
+Browser:
+![alt text](./app/assets/images/notes/Phase_3/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;3.jpg "Root Working In Browser Example")
+
+&nbsp;
+
+### **PokemonIndex**
+
