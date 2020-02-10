@@ -399,3 +399,45 @@ Browser:
 
 ### **PokemonIndex**
 
+Let us go back over our readings, where we learned that there are **two** types of `React` components: <kbd>presentational</kbd> and <kbd>container</kbd> components. 
+
+**Container components** (i.e. containers) are only given tasks related to `subscribing` to the store, `reading` the state, and `passing down` the necessary <kbd>props</kbd> to presentational components. 
+
+**Presentational components** are focused on `rendering` <kbd>JSX</kbd> `using` <kbd>props</kbd>, and `defining` the <kbd>user interface</kbd>!
+
+&nbsp;
+
+**PokemonIndexContainer**
+  * Create a `frontend/components/pokemon` folder.
+    * This will house all of the `React` <kbd>components</kbd> only focused on the <kbd>pokemon</kbd> slice of state. 
+
+  * With this folder, create a `pokemon_index_container.js` file.
+  * As with all container components, import the <kbd>connect</kbd> function from the <kbd>react-redux</kbd> package. 
+
+&nbsp;
+
+The <kbd>connect</kbd> function takes in two arguments that are functions: <kbd>mapStateToProps</kbd> and <kbd>mapDispatchToProps</kbd>. Each time the `Redux` <kbd>store</kbd> updates, both functions get invoked. These functions are what create, and pass props to our presentational component. 
+  * Define <kbd>mapStateToProps</kbd>.
+
+![alt text](./app/assets/images/notes/Phase_3/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;4.jpg "MapStateToProps Example")
+
+  * Define <kbd>mapDispatchToProps</kbd>.
+
+![alt text](./app/assets/images/notes/Phase_3/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;5.jpg "MapDispatchToProps Example")
+
+  * Import our <kbd>selectAllPokemon</kbd> selector.
+  * Use it to pass a <kbd>pokemon</kbd> prop to the connected presentational component <kbd>PokemonIndex</kbd>. 
+  * <kbd>this.props.pokemon</kbd> in <kbd>PokemonIndex</kbd> will return an array of all the pokemon objects in the application state. 
+  * In the next phase we will actually define our <kbd>PokemonIndex</kbd> component in `frontend/components/pokemon/pokemon_index.jsx`. Assume it already exists, and import it. 
+  * <kbd>connect</kbd> the <kdb>PokemonIndex</kdb> and export the returned component. 
+
+![alt text](./app/assets/images/notes/Phase_3/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;6.jpg "Connect With Arguments Example")
+
+&nbsp;
+
+Code:
+![alt text](./app/assets/images/notes/Phase_3/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;7.jpg "PokemonIndexContainer Example")
+
+&nbsp;
+
+**PokemonIndex**
