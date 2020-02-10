@@ -22,3 +22,13 @@ const Root = () => (
   </HashRouter>
 );
 export default Root; 
+
+
+// Route Wildcard Example // separate component that has routes for that slice of state
+const Users = () => (
+  // render the index of no id is included
+  <Route exact path="/users" component={UsersIndex} />
+
+  // otherwise render the profile page for that user
+  <Route path="/users/:userId" component={Profile} />
+); 

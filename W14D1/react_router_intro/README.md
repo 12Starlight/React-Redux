@@ -38,3 +38,14 @@ Looking at the following <kbd>Root</kbd> component, the <kbd>header</kbd> gets r
 &nbsp;
 
 # **URL Params**
+
+Information about a `URL parameteres` can also be held in a component's <kbd>props</kbd>. The router will match route segments starting at <kbd>:</kbd> up to the next <kbd>/</kbd>, <kbd>?</kbd>, or <kbd>#</kbd>. Those `matched values` are then passed to **components** via their <kbd>props</kbd>. Such segments are called *wildcards*. 
+
+Suppose we want to use the <kbd>Users</kbd> component to either render the <kbd>UsersIndex</kbd> or the <kbd>ProfilePage</kbd> for a particular user depending on the path. We could do something like this:
+
+![alt text](./Images/Screen&#32;Shot&#32;2020-02-10&#32;at&#32;3.jpg "Route Wildcard Example")
+
+&nbsp;
+
+Notice that we do not need to use <kbd>HashRouter</kbd> again ~ as long as it wraps our <kbd>Root</kbd> file all of our <kbd>Route</kbd> components will be able to connect to it. 
+
