@@ -385,7 +385,7 @@ Code:
 **Anywhere** we use <kbd>JSX</kbd>, we **must** import <kbd>React</kbd>.
   * Update your doc-ready callback in the `entry` file `pokedex.jsx`.
     * Import your newly defined <kbd>Root</kbd> component.
-    * Render it, by passing in <kbd>store</kbd> as prop. 
+    * Render it, by passing in <kbd>store</kbd> as the prop. 
 
 Code:
 ![alt text](./app/assets/images/notes/Phase_3/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;2.jpg "Calling Root Component In Docoment-Ready Example")
