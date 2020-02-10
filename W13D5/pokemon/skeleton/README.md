@@ -453,7 +453,7 @@ Okay, time to build the last <kbd>component</kbd> for Part 1 😂 Let us write t
 
 &nbsp;
 
-**Refresh the browswer and make sure <kbd>PokemonIndex</kbd> is rendering:** Our app, should display an empty <kbd>ul</kbd> reflecting our app's initial state, (add 'sleep(3)' on the top line of the index action for the Api::PokemonController) after the request to <kbd>requestAllPokemon</kbd> succeeds the ul will be populated with our Pokemon. Keep in mind, <kbd>webpack</kbd> is where we will find errors for debugging purposes!
+**Refresh the browswer and make sure <kbd>PokemonIndex</kbd> is rendering:** Our app, should display an empty <kbd>ul</kbd> reflecting our app's initial state, (add 'sleep(3)' on the top line of the index action for the `Api::PokemonController`) after the request to <kbd>requestAllPokemon</kbd> succeeds the ul will be populated with our Pokemon. Keep in mind, <kbd>webpack</kbd> is where we will find errors for debugging purposes!
 
 Each time you refresh the page, all of our `pokemon objects` should be displayed in a list format, each being displayed in its own li. Make sure to comment out all the code on the window used for testing purposes in our entry file. **Demonstrate our compentence by showing a TA our work, making sure that  our pokemon React components render before going onto Part 2!**
 
