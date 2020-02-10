@@ -326,4 +326,24 @@ Code:
 
 ![alt text](./app/assets/images/notes/Phase_2/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;16.jpg "Reconfiguring ConfigureStore To Add Thunk Example")
 
+&nbsp;
+
+**Connecting the Dots**
+
+Let us add a new `Thunk Action Creator` <kbd>requestAllPokemon</kbd>, dispatching a <kbd>RECEIVE_ALL_POKEMON</kbd> action if successful. It should not receive any arguments and should call the <kbd>APIUtil</kbd>, and then on resolution of the promise, dispatch <kbd>receiveAllPokemon</kbd>.
+
+This is your freebie!
+![alt text](./app/assets/images/notes/Phase_2/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;18.jpg "RequestAllPokemon Thunk Action Creator Example")
+
+&nbsp;
+
+Code:
+![alt text](./app/assets/images/notes/Phase_2/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;19.jpg "Putting RequestAllPokemon On Window")
+
+Browswer:
+![alt text](./app/assets/images/notes/Phase_2/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;20.jpg "Result Of Calling RequestAllPokemon In Console Example")
+
+&nbsp;
+
+### **Selectors**
 
