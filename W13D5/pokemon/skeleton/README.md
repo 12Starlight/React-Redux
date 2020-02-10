@@ -314,3 +314,16 @@ Code:
 Browswer:
 ![alt text](./app/assets/images/notes/Phase_2/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;14.jpg "Result Of Testing Store And Reducer In Console Example")
 
+&nbsp;
+
+### **Thunk Middleware**
+
+Create a new file `frontend/middleware/thunk.js` and export our <kbd>thunk</kbd> middleware. It will check the <kbd>typeof</kbd> incoming actions and either return => <kbd>action(dispatch)</kbd> **if they are functions**, or <kbd>next(action)</kbd> if they are not. Look at yesterdays [solutions](https://open.appacademy.io/learn/swe-online/react/todos--part-2-), if you need more guidence!
+  * Refactor you <kbd>configureStore</kbd> function to incorporate your <kbd>thunk</kbd> middleware.
+
+Code:
+![alt text](./app/assets/images/notes/Phase_2/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;17.jpg "Thunk Code Example")
+
+![alt text](./app/assets/images/notes/Phase_2/Screen&#32;Shot&#32;2020-02-09&#32;at&#32;16.jpg "Reconfiguring ConfigureStore To Add Thunk Example")
+
+
