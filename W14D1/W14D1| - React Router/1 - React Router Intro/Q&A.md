@@ -1,1 +1,0 @@
-1. How is HashRouter listening for changes in our application?
