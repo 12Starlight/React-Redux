@@ -1,1 +1,74 @@
-# **Action Steps**
+React W14D1 Notes
+- Intro to React Router Reading
+    - What is the purpose of React Router?
+    - What does the HashRouter do for us?
+    - What is the Route component and what is the purpose of it?
+        - What are the possible props of the Route component and what do they do?
+            - component (don't need this if you have render)
+            - path
+            - exact
+            - render (don't need this if you have component)
+    - Frontend routing and Wildcards
+        - How do we indicate wildcards in the path of Route component?
+    - What is the purpose of all the props that the direct child of a Route component has access to:
+        - location
+        - match
+            - isExact
+            - url
+            - path
+            - params
+        - history
+            - push
+            - replace
+- <Link> Reading
+    - What is the purpose of the Link component and what functionality does it replace?
+    - How is the Link component used?
+    - What is the purpose of a NavLink component and how does it differ from the Link component?
+    - What is the default activeClassName prop of NavLink?
+    - What is the default activeStyle prop of NavLink?
+- <Switch> Reading
+    - What is the purpose of a Switch component?
+    - Remember: Switch will only choose ONE Route component to render
+- withRouter Reading
+    - What is the purpose of withRouter?
+        - withRouter gives us the ability to give a component the props that a Route component would pass down to its child
+        - We don't need to wrap a component with Route if all we want is the props that a Route component gives. Instead we can use withRouter
+- <Redirect> Reading
+    - What is the purpose of the Redirect component?
+    - If the Redirect component is rendered on the page, what happens?
+    - What is the purpose of the `to` prop?
+- Frontend Routing Intro Video
+    - How did we change our Root component?
+    - In a very high level description, how does HashRouter change our url path and cause a re-render for our Route components?
+    - How is the NavLink being used and for what purpose?
+    - How is the Route component being used and for what purpose?
+- Route Wildcard Props Video
+    - How do we define a wildcard in our Route component?
+    - How do we access that wildcard value in the component that Route renders?
+- history.push Video
+    - Why do we need to control our own history?
+    - What is history.push doing?
+    - What is history.push going to be useful for?
+- Frontend Routes with Rails
+    - Where do we put HashRouter?
+    - How do we define our api routes in routes.rb and how are they different than the routes we created before?
+    - What is our root route doing in routes.rb? What is the purpose of that?
+    - What element is our event listener looking for in our frontend entry file? How do we make sure our view has that element and where do we put it?
+    - How do we render a component only at a specific route?
+    - Why do we need to remove turbolinks? How do we remove it?
+- Container Component ownProps & Wildcard Routes Video
+    - What is ownProps? How do we get things into ownProps?
+    - Why do we pass in information through a wildcard in our Route component instead of passing the information as props directly?
+    - How did Tommy make sure to pass in the author information along with the bleat? Why did he use Object.assign?
+    - Why did bleat come in as undefined when Tommy refreshed the screen at /bleats/1? How did he fix that?
+    - How does Tommy add the fetchBleat action? (how did he change the action, api util, reducers, mapDispatchToProps, and the component?)
+    - How did Tommy debug the 'Cannot find the route' error?
+- componentDidUpdate Video
+    - What did Tommy add to componentDidUpdate and why did he need to add it?
+- Form Redirection (history.push) Video
+    - How do we redirect our users after a creation of a bleat was successful?
+- Pokedex (Part 2) Project
+    - Be able to define Frontend Routes
+    - Be able to use json effectively to send information to your frontend components
+    - Know how to nest frontend routes
+Collapse
