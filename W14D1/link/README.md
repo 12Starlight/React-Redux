@@ -21,4 +21,7 @@ In order to take advantage of it <kbd>import { Link } from 'react-router-dom'</k
 
 #
 
-The <kbd>< NavLink ></kbd>
+The <kbd>< NavLink ></kbd> works just like a <kbd>< Link ></kbd>, but with a little extra functionaility. The main feature is it has the ability to add extra styling when the path it links to matches the current path. For a <kbd>Navbar</kbd>, it makes the ideal choice, hence the name 😉 Three <kbd>props</kbd> control the styling. 
+  * <kbd>activeClassName</kbd>: A CSS class name for styling a <kb>< Link ></kb> when its route is active. A <kbd>< Link ></kbd> is active when it has a <kbd>to</kbd> prop path that is the same as the current URL.
+
+![alt text](./images/Screen&#32;Shot&#32;2020-02-11&#32;at&#32;3.jpg "NavLink Prop ActiveClassName Example")
