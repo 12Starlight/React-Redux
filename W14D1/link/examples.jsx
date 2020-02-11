@@ -28,3 +28,10 @@
 // when not at path `users/123` the following is html rendered
 <a href='#/users/123'>Michael</a>
 
+
+// Nav Link exact prop example
+// this link will match the URL `/users/123`
+<NavLink to='/users' >Users</NavLink>
+
+// whereas this one will not
+<NavLink exact={true} to='/users' >Users</NavLink>
