@@ -25,3 +25,7 @@ The <kbd>< NavLink ></kbd> works just like a <kbd>< Link ></kbd>, but with a lit
   * <kbd>activeClassName</kbd>: A CSS class name for styling a <kb>< Link ></kb> when its route is active. A <kbd>< Link ></kbd> is active when it has a <kbd>to</kbd> prop path that is the same as the current URL.
 
 ![alt text](./images/Screen&#32;Shot&#32;2020-02-11&#32;at&#32;3.jpg "NavLink Prop ActiveClassName Example")
+
+  * <kbd>activeStyle</kbd>: A `react` style object that will be applied inline to the <kbd>< Link ></kbd> when it is <kbd>to</kbd> prop matches the current URL.
+
+![alt text](./images/Screen&#32;Shot&#32;2020-02-11&#32;at&#32;4.jpg "NavLink Prop ActiveStyle Example")
