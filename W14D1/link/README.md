@@ -29,3 +29,13 @@ The <kbd>< NavLink ></kbd> works just like a <kbd>< Link ></kbd>, but with a lit
   * <kbd>activeStyle</kbd>: A `react` style object that will be applied inline to the <kbd>< Link ></kbd> when it is <kbd>to</kbd> prop matches the current URL.
 
 ![alt text](./images/Screen&#32;Shot&#32;2020-02-11&#32;at&#32;4.jpg "NavLink Prop ActiveStyle Example")
+
+  * <kbd>exact</kbd>: A boolean prop that defaults to <kbd>false</kbd>. If set to true the <kbd>activeStyle</kbd> and <kbd>activeClassName</kbd> props will only be applied when the current URL exactly matches the <kbd>to</kbd> prop. For example: 
+
+![alt text](./images/Screen&#32;Shot&#32;2020-02-11&#32;at&#32;5.jpg "NavLink Prop Exact Example")
+
+&nbsp;
+
+# **Resources**
+  * [Link](https://reacttraining.com/react-router/web/api/Link)
+  * [NavLink](https://reacttraining.com/react-router/web/api/NavLink)
