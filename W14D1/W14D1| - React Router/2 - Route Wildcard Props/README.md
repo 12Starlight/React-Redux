@@ -14,7 +14,10 @@
 
 <kbd>this.props.match.params</kbd> 
 
-<kbd>:something points => /whatever</kbd> `{ something: whatever }`
+<kbd>:something points => /whatever</kbd> 
+
+`{ something: whatever }`
+
 ![alt text](./images/Screen&#32;Shot&#32;2020-02-12&#32;at&#32;2.jpg "This.props.match.params.something Example")
 
 
