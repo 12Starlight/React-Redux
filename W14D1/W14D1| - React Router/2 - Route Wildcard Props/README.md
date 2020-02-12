@@ -10,10 +10,7 @@
 
 ![alt text](./images/Screen&#32;Shot&#32;2020-02-12&#32;at&#32;1.jpg "This.props Values For Front End Route Example") 
 
-&nbsp;
-
-<kbd>this.props.match.params</kbd> 
-
+<kbd>this.props.match.params</kbd> &nbsp;
 <kbd>:something points => /whatever</kbd> 
 
 `{ something: whatever }`
