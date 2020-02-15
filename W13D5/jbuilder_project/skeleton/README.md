@@ -36,3 +36,6 @@ Now that you have it working, let us now go and create an <kbd>:index</kbd> view
 Both methods well help you get better familiar with `Jbuilder`. Let us though, refactor the two `templates` of <kbd>single guest details</kbd>into a partial due to them doing similar things. Convention is to name our partial in the same way as we would for <HTML> views, e.g. <kbd>_guest.json.jbuilder</kbd>. Make sure that 'api/' is in our partial path.  
 
 Okay, now that we have the ball rollling, let us add some more <kbd>associated</kbd> data. We want the <kbd>gifts</kbd> for individual <kbd>guests</kbd>, but not when we are looking at all guests (that is just too much data for eyes lol). In our <kbd>:show</kbd> view, render guest's gifts. Only include the title and description. Using <kbd>json.array!</kbd> at the top level, will break **other** <kbd>guest</kbd> `information`. So, we want to make sure that our data is nested by passing it as an argument to <kbd>json.gifts</kbd>.
+
+Time to take the training wheels off. Let us make a `gift` <kbd>:show</kbd> and `guest` `gift` <kbd>:index</kbd> vies. Then make sure the specs pass.
+
