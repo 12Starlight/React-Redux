@@ -37,5 +37,6 @@ Both methods well help you get better familiar with `Jbuilder`. Let us though, r
 
 Okay, now that we have the ball rollling, let us add some more <kbd>associated</kbd> data. We want the <kbd>gifts</kbd> for individual <kbd>guests</kbd>, but not when we are looking at all guests (that is just too much data for eyes lol). In our <kbd>:show</kbd> view, render guest's gifts. Only include the title and description. Using <kbd>json.array!</kbd> at the top level, will break **other** <kbd>guest</kbd> `information`. So, we want to make sure that our data is nested by passing it as an argument to <kbd>json.gifts</kbd>.
 
-Time to take the training wheels off. Let us make a `gift` <kbd>:show</kbd> and `guest` `gift` <kbd>:index</kbd> vies. Then make sure the specs pass.
+Time to take the training wheels off. Let us make a `gift` <kbd>:show</kbd> and `guest` `gift` <kbd>:index</kbd> views. Then make sure the specs pass.
 
+Aright, now let us move onto `parties` and build <kbd>:index</kbd> and <kbd>:show</kbd>. For index, show all parties with all of their guests. In the show view, include not just the guests, but all of the guest's gifts as well. 
