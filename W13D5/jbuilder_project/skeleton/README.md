@@ -10,7 +10,7 @@ So, now let us set up our routes. We defined all of our controllers under the <k
 
 Start with gifts, then nest the <kbd>:index</kbd> route under the guests resource. Use the below example to format your answer.
 
-![alt text](./app/assets/images/setup/Screen&#32;Shot&#32;2020-02-14&#32;at&#32;1.jpg "API Namespace Example")
+![alt text](./app/assets/images/jbuilder/Screen&#32;Shot&#32;2020-02-14&#32;at&#32;1.jpg "API Namespace Example")
 
 &nbsp;
 
@@ -19,7 +19,7 @@ Run <kbd>rails routes</kbd> and make sure you are getting the result you want. I
   * Second, we can build Jbuilder partials as we id with `HTML and ERB` and render them using <kbd>json.partial!</kbd> in our templates.
   * Third, we can nest our data by opening blocks for a given key in our object. For example,
 
-![alt text](./app/assets/images/setup/Screen&#32;Shot&#32;2020-02-15&#32;at&#32;2.jpg "Jbuilder Block Example")
+![alt text](./app/assets/images/jbuilder/Screen&#32;Shot&#32;2020-02-15&#32;at&#32;2.jpg "Jbuilder Block Example")
 
 &nbsp;
 
@@ -29,7 +29,7 @@ Go ahead and make our first template <kbd>show.json.jbuilder</kbd> view for our 
 
 Now that you have it working, let us now go and create an <kbd>:index</kbd> view. For this, use <kbd>json.array!</kbd> and pass <kbd>@guests</kbd>. Keep in mind that a block is a good way to specify what you want rendered for each guest. However, switch it up a little and **do not** use <kbd>json.extract!</kbd> --instead specify each component individually. For example:
 
-![alt text](./app/assets/images/setup/Screen&#32;Shot&#32;2020-02-15&#32;at&#32;3.jpg "JSON Specific Block Example")
+![alt text](./app/assets/images/jbuilder/Screen&#32;Shot&#32;2020-02-15&#32;at&#32;3.jpg "JSON Specific Block Example")
 
 &nbsp;
 
@@ -45,13 +45,13 @@ During our project, we will experience some insane [N + 1 Queries](https://open.
 
 Now is the real test! Let us see, if we can find any other <kbd>N + 1 Queries</kbd> that we made throughout the project and then, defeat them. **Idea**: look at your <kbd>rails s</kbd> logs and notice when there are **multiple** queries. 
 
-![alt text](./app/assets/images/setup/Screen&#32;Shot&#32;2020-02-15&#32;at&#32;4.jpg "Multiple Query Calls Example")
+![alt text](./app/assets/images/jbuilder/Screen&#32;Shot&#32;2020-02-15&#32;at&#32;4.jpg "Multiple Query Calls Example")
 
 &nbsp;
 
 Wow! Do you see all those <kbd>gift</kbd> loads? These are all <kbd>N + 1 Queries</kbd> that unnecessarily accompany our **1** query for the <kbd>party</kbd> and **1** query for the <kbd>guests</kbd>. After we fix it, we get efficient calls.
 
-![alt text](./app/assets/images/setup/Screen&#32;Shot&#32;2020-02-15&#32;at&#32;5.jpg "Efficient Query Calls Example")    
+![alt text](./app/assets/images/jbuilder/Screen&#32;Shot&#32;2020-02-15&#32;at&#32;5.jpg "Efficient Query Calls Example")    
 
 &nbsp;
 
