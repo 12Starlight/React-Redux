@@ -51,7 +51,7 @@ Now is the real test! Let us see, if we can find any other <kbd>N + 1 Queries</k
 
 Wow! Do you see all those <kbd>gift</kbd> loads? These are all <kbd>N + 1 Queries</kbd> that unnecessarily accompany our **1** query for the <kbd>party</kbd> and **1** query for the <kbd>guests</kbd>. After we fix it, we get efficient calls.
 
-![alt text](./app/assets/images/setup/Screen&#32;Shot&#32;2020-02-15&#32;at&#32;5.jpg "Efficient Query Calls Example")
+![alt text](./app/assets/images/setup/Screen&#32;Shot&#32;2020-02-15&#32;at&#32;5.jpg "Efficient Query Calls Example")    
 
 &nbsp;
 
