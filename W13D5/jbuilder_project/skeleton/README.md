@@ -57,3 +57,6 @@ Wow! Do you see all those <kbd>gift</kbd> loads? These are all <kbd>N + 1 Querie
 
 ### **Bonus**
 
+To make this work, we need to go to the <kbd>bonus spec file</kbd> and remove the line <kbd>before { pending('Bonus') }</kbd>.
+
+Then let us change our <kbd>:index</kbd> view, so that it only will show guests that are between the ages of 40 and 50 years old. This normally would be done in `Active Record`. However, it is good practice for using `Ruby` in `Jbuilder` 😉😎

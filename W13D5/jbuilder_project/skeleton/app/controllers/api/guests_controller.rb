@@ -1,6 +1,8 @@
 class Api::GuestsController < ApplicationController
   def index
-    @guests = Guest.all
+    # ALL of these actions use Active Record, make sure to read the documentation
+    # @guests = Guest.where(age: 40..50).all 
+    @guests = Guest.all 
     render :index
   end
 
