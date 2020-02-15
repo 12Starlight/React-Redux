@@ -32,7 +32,10 @@ ActiveRecord::Schema.define(version: 20170714204346) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "invitations", force: :cascade do |t|
+  # invitations is just the name of the join table and does not every get used 
+  # directly, instead it is the associations that get used that are connected 
+  # via this join table
+  create_table "invitations", force: :cascade do |t| 
     t.integer "guest_id"
     t.integer "party_id"
     t.datetime "created_at", null: false

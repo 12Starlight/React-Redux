@@ -40,3 +40,20 @@ Okay, now that we have the ball rollling, let us add some more <kbd>associated</
 Time to take the training wheels off. Let us make a `gift` <kbd>:show</kbd> and `guest` `gift` <kbd>:index</kbd> views. Then make sure the specs pass.
 
 Aright, now let us move onto `parties` and build <kbd>:index</kbd> and <kbd>:show</kbd>. For index, show all parties with all of their guests. In the show view, include not just the guests, but all of the guest's gifts as well. 
+
+During our project, we will experience some insane [N + 1 Queries](https://open.appacademy.io/learn/swe-online/react/n-plus-one). Are we calling <kbd>.gifts</kbd> for every guest in the `parties` <kbd>:show</kbd> view? That is an **extra query** for every **guest**! Do not worry, we can fix this 😍 using our `Active Record` skills. Let us go ahead and use <kbd>.includes</kbd> which pre-fetches whatever data we tell it. For example, in the <kbd>PartiesController#index</kbd>, we could call <kbd>.includes(guests:[:gifts])</kbd>; then, when we call <kbd>.gifts</kbd> on each guest in our `Jbuilder` template, we will use that pre-fetched data and do not actually have to keep hitting the database!
+
+Now is the real test! Let us see, if we can find any other <kbd>N + 1 Queries</kbd> that we made throughout the project and then, defeat them. **Idea**: look at your <kbd>rails s</kbd> logs and notice when there are **multiple** queries. 
+
+![alt text](./app/assets/images/Setup/Screen&#32;Shot&#32;2020-02-15&#32;at&#32;4.jpg "Multiple Query Calls Example")
+
+&nbsp;
+
+Wow! Do you see all those <kbd>gift</kbd> loads? These are all <kbd>N + 1 Queries</kbd> that unnecessarily accompany our **1** query for the <kbd>party</kbd> and **1** query for the <kbd>guests</kbd>. After we fix it, we get efficient calls.
+
+![alt text](./app/assets/images/Setup/Screen&#32;Shot&#32;2020-02-15&#32;at&#32;5.jpg "Efficient Query Calls Example")
+
+&nbsp;
+
+### **Bonus**
+
