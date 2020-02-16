@@ -26,7 +26,9 @@
 &nbsp;
 
 application.html.erb:
+
 ![alt text](./bleater/app/assets/images/Screen&#32;Shot&#32;2020-02-16&#32;at&#32;1.jpg "Application.HTML.ERB Turbolinks Example")
 
 application.js: 
+
 ![alt text](./bleater/app/assets/images/Screen&#32;Shot&#32;2020-02-16&#32;at&#32;2.jpg "APP/ASSETS/JAVASCRIPTS/Aplication Turbolinks Example")
