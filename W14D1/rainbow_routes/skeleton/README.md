@@ -49,3 +49,21 @@ Go ahead and add links to the paths <kbd>/red</kbd>, <kbd>/green</kbd>, <kbd>/bl
 &nbsp;
 
 Now let us ad the <kbd>Link</kbd>'s to <kbd>/red</kbd>, <kbd>/red/orange</kbd> and <kbd>/red/yellow</kbd> to red. Then test everything to make sure it works. See, is that not easy!
+
+&nbsp;
+
+### **Phase 3: NavLinks**
+
+Okay, so it would be nice to give the user indication of which route they were at via our links. Turns out, `React Router` has a special component for exactly that: <kbd>NavLink</kbd>. NavLinks has an extra <kbd>CSS</kbd> `class` when the <kbd>to</kbd> prop matches the current URL. The default name for this class is called <kbd>active</kbd>.
+
+Let us switch all of our <kbd>Link</kbd>s to <kbd>NavLink</kbd>s. By just opening the app, the change will not become apparent yet. This is due to the fact that we have not added any special styling to the <kbd>active</kbd> class. Open the `application.css` file and find the <kbd>.active</kbd> class. Then add the line <kbd>font-weight: 700</kbd>. Now all our active links are bold, very cool!
+
+However we have run into a problem, our <kbd>Blue only</kbd> link is active at any path that matches it, including <kbd>/blue/indigo</kbd>. This does not make a ton of sense. So, we need to add an <kbd>exact</kbd> flat to that link in order for it to **only** be active when <kbd>to</kbd> **exactly matches** the current path. 
+
+![alt text](./images/Screen&#32;Shot&#32;2020-02-16&#32;at&#32;5.jpg "NavLink Blue Example")
+
+&nbsp;
+
+Make sure to do the same for <kbd>Red only</kbd> link to get everything working correctly.
+
+Compare everything to the solution provided and that the behavior matches 😎🥇
