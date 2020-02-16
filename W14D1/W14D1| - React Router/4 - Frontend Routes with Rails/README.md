@@ -21,7 +21,7 @@
 &nbsp;
 
 5. Turbolinks? how can we remove them?
->Answer: Turbolinks is a rails helper function that tries to make sure our html is rendered faster. We have to get rid of it in `application.html.erb` <kbd>data-turbolinks-track: true</kbd>. Then in `app/assets/javascripts/application.js`, we want to remove the sprocket <kbd>//= require turbolinks</kbd>. Make sure to go to our Gemfile and remove the gem as wel.  
+>Answer: Turbolinks is a rails helper function that tries to make sure our html is rendered faster by trying to do a lot of the same things HashRouter does. It clashes with our <kbd>HashRouter</kbd>. So, we have to get rid of it in `application.html.erb` <kbd>data-turbolinks-track: true</kbd>. Then in `app/assets/javascripts/application.js`, we want to remove the sprocket <kbd>//= require turbolinks</kbd>. Make sure to go to our Gemfile and remove the gem as wel.  
 
 &nbsp;
 
