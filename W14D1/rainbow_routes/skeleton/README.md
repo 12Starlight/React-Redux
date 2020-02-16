@@ -29,3 +29,23 @@ Time to open up the file `components/rainbow.jsx`, so we can render some of our 
 Before moving on, make sure it works by manually typing in each <kbd>URL</kbd> we just created in order to see the component render. These are `React Routes`, so our paths will come after the <kbd>#</kbd>. An example might look like, <kbd>< some-local >/skeleton/index.html#red </kbd>.
 
 Now that we have started, let us nest the <kbd>Orange</kbd> and <kbd>Yellow</kbd> components inside the <kbd>Red</kbd> component, and the <kbd>Indigo</kbd> component inside the <kbd>Blue</kbd> component. This means, that in order for this to work, <kbd>Route</kbd> tags need to be added to `red.jsx` and `blue.jsx` files. We need to use the exact nested path, such as `/red/orange` for the orange <kbd>Route</kbd>.
+
+&nbsp;
+
+### **Phase 2: Links**
+
+So, as you probably noticed, it gets tiresome to manually navigate to our newly created routes. Let us add some functionality to take care of this for us. Link is `React Router`'s solution. 
+
+Go ahead and add links to the paths <kbd>/red</kbd>, <kbd>/green</kbd>, <kbd>/blue</kbd>, and <kbd>/violet</kbd> in the <kbd>Rainbow</kbd> component. An example can be demonstrated as follows:
+
+![alt text](./images/Screen&#32;Shot&#32;2020-02-16&#32;at&#32;3.jpg "Link Red Example")
+
+&nbsp;
+
+<kbd>blue</kbd> should have a way to get to <kbd>/blue/indigo</kbd>, then back again. Go and add this <kbd>Link</kbd> along with the <kbd>blue</kbd> component as well:
+
+![alt text](./images/Screen&#32;Shot&#32;2020-02-16&#32;at&#32;4.jpg "Link Blue and Blue/Indigo Example")
+
+&nbsp;
+
+Now let us ad the <kbd>Link</kbd>'s to <kbd>/red</kbd>, <kbd>/red/orange</kbd> and <kbd>/red/yellow</kbd> to red. Then test everything to make sure it works. See, is that not easy!
