@@ -7,4 +7,4 @@ preProps.match.params.bleatId:
 ![alt text](./bleater/app/assets/images/Screen&#32;Shot&#32;2020-02-17&#32;at&#32;1.jpg "PreviousProps Example")
 
 componentDidUpdate():
-![alt text](./bleater/app/assets/images/Screen&#32;Shot&#32;2020-02-17&#32;at&#32;2.jpg "ComponentDidUpdate PreviousProps Example") 
+![alt text](./bleater/app/assets/images/Screen&#32;Shot&#32;2020-02-17&#32;at&#32;2.jpg "ComponentDidUpdate PreviousProps Example")  

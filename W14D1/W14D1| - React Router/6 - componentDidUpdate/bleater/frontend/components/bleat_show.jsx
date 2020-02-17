@@ -13,7 +13,7 @@ class BleatShow extends React.Component {
     if (this.props.match.params.bleatId !== prevProps.match.params.bleatId) {
       this.props.fetchBleat();
     }
-  }
+  } 
 
   render() {
     // debugger;
