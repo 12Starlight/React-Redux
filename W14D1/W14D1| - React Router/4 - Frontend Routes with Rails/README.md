@@ -31,4 +31,4 @@ application.html.erb:
 
 application.js: 
 
-![alt text](./bleater/app/assets/images/Screen&#32;Shot&#32;2020-02-16&#32;at&#32;2.jpg "APP/ASSETS/JAVASCRIPTS/Aplication Turbolinks Example")
+![alt text](./bleater/app/assets/images/Screen&#32;Shot&#32;2020-02-16&#32;at&#32;2.jpg "APP/ASSETS/JAVASCRIPTS/Aplication Turbolinks Example") 
