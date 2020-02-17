@@ -5,5 +5,5 @@
 
 &nbsp;
 
-1. How can we "redirect" someone using `hashrouter`?
+2. How can we "redirect" someone using `hashrouter`?
 >Answer: <kbd>this.props.history.push('/somewhere');</kbd>
