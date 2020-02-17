@@ -20,20 +20,20 @@ React W14D1 Notes
         - history
             - push
             - replace
-- <Link> Reading
+- < Link > Reading
     - What is the purpose of the Link component and what functionality does it replace?
     - How is the Link component used?
     - What is the purpose of a NavLink component and how does it differ from the Link component?
     - What is the default activeClassName prop of NavLink?
     - What is the default activeStyle prop of NavLink?
-- <Switch> Reading
+- < Switch > Reading
     - What is the purpose of a Switch component?
     - Remember: Switch will only choose ONE Route component to render
 - withRouter Reading
     - What is the purpose of withRouter?
         - withRouter gives us the ability to give a component the props that a Route component would pass down to its child
         - We don't need to wrap a component with Route if all we want is the props that a Route component gives. Instead we can use withRouter
-- <Redirect> Reading
+- < Redirect > Reading
     - What is the purpose of the Redirect component?
     - If the Redirect component is rendered on the page, what happens?
     - What is the purpose of the `to` prop?
