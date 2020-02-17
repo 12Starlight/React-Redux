@@ -8,20 +8,20 @@
 2. How do we use ownProps to get a wildcard?
 >Answer: We use <kbd>ownProps.match.params.somethingId</kbd> which gives us the route <kbd>:wildcard</kbd> at the end of our <kbd>path='somewhere/:wildcard'</kbd> inside our <kbd>Route</kbd> component we want to render. (i.e. <kbd>localhost:3000/#/bleats/1</kbd>)
 
-![alt text](./../4&#32;-&#32;Frontend&#32;Routes&#32;with&#32;Rails/bleater/app/assets/images/Screen&#32;Shot&#32;2020-02-16&#32;at&#32;3.jpg "OwnProps Example")
+![alt text](./bleater/app/assets/images/Screen&#32;Shot&#32;2020-02-16&#32;at&#32;1.jpg "OwnProps Example")
 
-![alt text](./../4&#32;-&#32;Frontend&#32;Routes&#32;with&#32;Rails/bleater/app/assets/images/Screen&#32;Shot&#32;2020-02-16&#32;at&#32;4.jpg "Component Rendered Using OwnProps Example") 
+![alt text](./bleater/app/assets/images/Screen&#32;Shot&#32;2020-02-16&#32;at&#32;2.jpg "Component Rendered Using OwnProps Example") 
 
 &nbsp;
 
-3. How would we get the author of a bleat?
+1. How would we get the author of a bleat?
 >Answer: Here <kbd>bleat</kbd> is the bleat that is directly in the state. We do not want to modify it directly though. So, we would use <kbd>Object.assign({}, bleat, { author: 'points to something' }</kbd>, using our <kbd>foreign key property</kbd> on <kbd>Users</kbd>
 
-![alt text](./../4&#32;-&#32;Frontend&#32;Routes&#32;with&#32;Rails/bleater/app/assets/images/Screen&#32;Shot&#32;2020-02-16&#32;at&#32;5.jpg "Creating Author Example")  
+![alt text](./bleater/app/assets/images/Screen&#32;Shot&#32;2020-02-16&#32;at&#32;3.jpg "Creating Author Example")  
 
 &nbsp;
 
-4. If a client wanted to go directly to the route <kbd>localhost:3000/#/bleats/1</kbd>, instead of of first going to <kbd>:index</kbd>, **then** <kbd>:show</kbd>, how would we do that?
+1. If a client wanted to go directly to the route <kbd>localhost:3000/#/bleats/1</kbd>, instead of of first going to <kbd>:index</kbd>, **then** <kbd>:show</kbd>, how would we do that?
 >Answer: 
 
 1). &nbsp; In the show <kbd>container</kbd> componenet, we would want to create a conditional that checked whether the bleat exists or not. Then we would create the `api_util` <kbd>fetchBleat(id)</kbd>. Afterword, we create the <kbd>constant</kbd>, <kbd>Regular Action Creator</kbd> (we use the same `Regular Action Creator` for fetchBleats() and just handle the logic in the <kbd>:show</kbd> BleatController action), and `Thunk Action Creator` <kbd>fetchBleat(id)</kbd>. 
@@ -35,41 +35,41 @@
 1.)
 
 Conditional Checking Whether Bleat Exists: 
-![alt text](./../4&#32;-&#32;Frontend&#32;Routes&#32;with&#32;Rails/bleater/app/assets/images/Screen&#32;Shot&#32;2020-02-16&#32;at&#32;6.jpg "Conditional Checking Whether Bleat Exists Example")
+![alt text](./bleater/app/assets/images/Screen&#32;Shot&#32;2020-02-16&#32;at&#32;4.jpg "Conditional Checking Whether Bleat Exists Example")
 
 ApiUtil fetchBleat(id):
-![alt text](./../4&#32;-&#32;Frontend&#32;Routes&#32;with&#32;Rails/bleater/app/assets/images/Screen&#32;Shot&#32;2020-02-16&#32;at&#32;7.jpg "ApiUtil FetchBleat(id) Example")
+![alt text](./bleater/app/assets/images/Screen&#32;Shot&#32;2020-02-16&#32;at&#32;5.jpg "ApiUtil FetchBleat(id) Example")
 
 Re-using RECEIVE_BLEAT_AND_AUTHORS:
-![alt text](./../4&#32;-&#32;Frontend&#32;Routes&#32;with&#32;Rails/bleater/app/assets/images/Screen&#32;Shot&#32;2020-02-16&#32;at&#32;8.jpg "Receive Bleat Constant Example")
+![alt text](./bleater/app/assets/images/Screen&#32;Shot&#32;2020-02-16&#32;at&#32;6.jpg "Receive Bleat Constant Example")
 
 Re-using receiveBleats Regular Action Creator:
-![alt text](./../4&#32;-&#32;Frontend&#32;Routes&#32;with&#32;Rails/bleater/app/assets/images/Screen&#32;Shot&#32;2020-02-16&#32;at&#32;9.jpg "Receive Bleat Regular Action Creator Example")
+![alt text](./bleater/app/assets/images/Screen&#32;Shot&#32;2020-02-16&#32;at&#32;7.jpg "Receive Bleat Regular Action Creator Example")
 
 Show Controller Action Logic:
-![alt text](./../4&#32;-&#32;Frontend&#32;Routes&#32;with&#32;Rails/bleater/app/assets/images/Screen&#32;Shot&#32;2020-02-16&#32;at&#32;10.jpg "Show Controller Action Logic Example")
+![alt text](./bleater/app/assets/images/Screen&#32;Shot&#32;2020-02-16&#32;at&#32;8.jpg "Show Controller Action Logic Example")
 
 Thunk Action Creator:
-![alt text](./../4&#32;-&#32;Frontend&#32;Routes&#32;with&#32;Rails/bleater/app/assets/images/Screen&#32;Shot&#32;2020-02-17&#32;at&#32;11.jpg "Thunk Action Creator")
+![alt text](./bleater/app/assets/images/Screen&#32;Shot&#32;2020-02-17&#32;at&#32;9.jpg "Thunk Action Creator")
 
 2).
 
 Adding Show To Routes:
-![alt text](./../4&#32;-&#32;Frontend&#32;Routes&#32;with&#32;Rails/bleater/app/assets/images/Screen&#32;Shot&#32;2020-02-17&#32;at&#32;12.jpg "Routes Example")
+![alt text](./bleater/app/assets/images/Screen&#32;Shot&#32;2020-02-17&#32;at&#32;10.jpg "Routes Example")
 
 Jbuilder JSON Response Example:
-![alt text](./../4&#32;-&#32;Frontend&#32;Routes&#32;with&#32;Rails/bleater/app/assets/images/Screen&#32;Shot&#32;2020-02-17&#32;at&#32;13.jpg "JBuilder JSON Response Example")
+![alt text](./bleater/app/assets/images/Screen&#32;Shot&#32;2020-02-17&#32;at&#32;11.jpg "JBuilder JSON Response Example")
 
 Bleats Reducer Example:
-![alt text](./../4&#32;-&#32;Frontend&#32;Routes&#32;with&#32;Rails/bleater/app/assets/images/Screen&#32;Shot&#32;2020-02-17&#32;at&#32;14.jpg "Bleats Reducer Example")
+![alt text](./bleater/app/assets/images/Screen&#32;Shot&#32;2020-02-17&#32;at&#32;12.jpg "Bleats Reducer Example")
 
 3).
 
 Creating Key <kbd>fetchBleat:</kbd> BleatShowContainer mapDispatchToProps: 
-![alt text](./../4&#32;-&#32;Frontend&#32;Routes&#32;with&#32;Rails/bleater/app/assets/images/Screen&#32;Shot&#32;2020-02-17&#32;at&#32;15.jpg "BleatShowContainer MapDispatchToProps Example")
+![alt text](./bleater/app/assets/images/Screen&#32;Shot&#32;2020-02-17&#32;at&#32;13.jpg "BleatShowContainer MapDispatchToProps Example")
 
 Putting <kbd>this.props.fetchBleat()</kbd> in ComponentDidMount():
-![alt text](./../4&#32;-&#32;Frontend&#32;Routes&#32;with&#32;Rails/bleater/app/assets/images/Screen&#32;Shot&#32;2020-02-17&#32;at&#32;16.jpg "BleatShow Presentational ComponentDidMount() Example")
+![alt text](./bleater/app/assets/images/Screen&#32;Shot&#32;2020-02-17&#32;at&#32;14.jpg "BleatShow Presentational ComponentDidMount() Example")
 
 
 
