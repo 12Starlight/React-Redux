@@ -11,7 +11,7 @@
 &nbsp;
 
 3. React often requires us to do a 'hard-reload,' how is this accomplished?
->Answer: <kbd>cmd + shft + return</kbd>
+>Answer: <kbd>cmd + shft + r</kbd>
 
 &nbsp;
 
