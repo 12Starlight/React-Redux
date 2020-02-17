@@ -1,4 +1,4 @@
-import { connect } from 'react-redux';
+ import { connect } from 'react-redux';
 import BleatShow from './bleat_show';
 import { fetchBleat } from '../actions/bleat_actions';
 
@@ -12,7 +12,7 @@ const mapStateToProps = function (state, ownProps) {
       bleat,
       {author: state.users[bleat.author_id]}
     );
-  }
+  } 
   
   return {
     bleat: bleat

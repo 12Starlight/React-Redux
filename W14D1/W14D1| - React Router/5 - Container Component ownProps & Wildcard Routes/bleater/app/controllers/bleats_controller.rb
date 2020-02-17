@@ -10,8 +10,9 @@ class BleatsController < ApplicationController
   end
 
   def show
-    @bleat = Bleat.find(params[:id])
-    render :show
+    bleat = Bleat.find(params[:id])
+    @bleats = [bleat]
+    render :index
   end
 
   def new
